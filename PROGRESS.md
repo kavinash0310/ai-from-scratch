@@ -39,16 +39,16 @@ Add one entry when you finish a study session or milestone.
 
 Use the [project template](templates/project-template.md) when starting a project.
 
-## Full course chapter tracker
+## Subject folders and 62-topic tracker
 
-Use the [full course index](course/README.md) for notes, diagrams, Q&A, and exercises. Mark a chapter complete after you can explain its ideas and finish its practice.
+Use the [full course index](course/README.md) for the subject folders and detailed lessons. Mark a topic complete after you can explain it and finish its practice.
 
-### Part 0 — Foundations and study method
+### [Foundations](course/foundations/README.md)
 
 - [ ] Chapter 01 — AI: scope and branches
 - [ ] Chapter 02 — How to study and measure progress
 
-### Part 1 — Computing and Python
+### [Python and software foundations](course/python/README.md)
 
 - [ ] Chapter 03 — Computer execution, files, and environments
 - [ ] Chapter 04 — Python fundamentals
@@ -56,7 +56,7 @@ Use the [full course index](course/README.md) for notes, diagrams, Q&A, and exer
 - [ ] Chapter 06 — Git and GitHub
 - [ ] Chapter 07 — SQL and relational data
 
-### Part 2 — Mathematics for AI
+### [Mathematics](course/mathematics/README.md)
 
 - [ ] Chapter 08 — Algebra and functions
 - [ ] Chapter 09 — Linear algebra: vectors and matrices
@@ -64,7 +64,7 @@ Use the [full course index](course/README.md) for notes, diagrams, Q&A, and exer
 - [ ] Chapter 11 — Calculus and derivatives
 - [ ] Chapter 12 — Optimization and gradient descent
 
-### Part 3 — Data and classical AI
+### [Data framing and classical AI](course/ai/README.md) · [ML data](course/ml/README.md)
 
 - [ ] Chapter 13 — Task framing and data contracts
 - [ ] Chapter 14 — Search and planning
@@ -72,7 +72,7 @@ Use the [full course index](course/README.md) for notes, diagrams, Q&A, and exer
 - [ ] Chapter 16 — Probabilistic reasoning
 - [ ] Chapter 17 — Choosing classical AI methods
 
-### Part 4 — Machine learning
+### [Machine learning](course/ml/README.md)
 
 - [ ] Chapter 18 — Learning from examples
 - [ ] Chapter 19 — Regression and classification
@@ -80,7 +80,7 @@ Use the [full course index](course/README.md) for notes, diagrams, Q&A, and exer
 - [ ] Chapter 21 — Other classical methods
 - [ ] Chapter 22 — End-to-end ML workflow
 
-### Part 5 — Evaluation and model selection
+### [ML evaluation](course/ml/README.md)
 
 - [ ] Chapter 23 — Train, validation, and test splits
 - [ ] Chapter 24 — Classification and regression metrics
@@ -88,7 +88,7 @@ Use the [full course index](course/README.md) for notes, diagrams, Q&A, and exer
 - [ ] Chapter 26 — Uncertainty and calibration
 - [ ] Chapter 27 — Robustness, fairness, and explanations
 
-### Part 6 — Deep learning and vision
+### [Deep learning](course/deep-learning/README.md) · [Computer vision](course/computer-vision/README.md)
 
 - [ ] Chapter 28 — Neural networks as functions
 - [ ] Chapter 29 — Loss, backpropagation, and optimization
@@ -96,7 +96,7 @@ Use the [full course index](course/README.md) for notes, diagrams, Q&A, and exer
 - [ ] Chapter 31 — Computer vision tasks and CNNs
 - [ ] Chapter 32 — Image-classifier case study
 
-### Part 7 — NLP
+### [Natural language processing](course/nlp/README.md)
 
 - [ ] Chapter 33 — Language data and task types
 - [ ] Chapter 34 — Text representations before transformers
@@ -104,7 +104,7 @@ Use the [full course index](course/README.md) for notes, diagrams, Q&A, and exer
 - [ ] Chapter 36 — Sequence models and transformers
 - [ ] Chapter 37 — NLP evaluation and data care
 
-### Part 8 — Transformers and LLMs
+### [Large language models](course/llm/README.md)
 
 - [ ] Chapter 38 — Attention and transformer blocks
 - [ ] Chapter 39 — Pretraining and next-token prediction
@@ -112,7 +112,7 @@ Use the [full course index](course/README.md) for notes, diagrams, Q&A, and exer
 - [ ] Chapter 41 — Model families and adaptation
 - [ ] Chapter 42 — LLM limitations and evaluation
 
-### Part 9 — Generative AI systems
+### [Generative AI](course/generative-ai/README.md)
 
 - [ ] Chapter 43 — Prompting and structured outputs
 - [ ] Chapter 44 — Retrieval-augmented generation
@@ -120,7 +120,7 @@ Use the [full course index](course/README.md) for notes, diagrams, Q&A, and exer
 - [ ] Chapter 46 — Fine-tuning and model selection
 - [ ] Chapter 47 — Image, audio, and video generation
 
-### Part 10 — Other AI fields
+### [Specializations](course/specializations/README.md)
 
 - [ ] Chapter 48 — Reinforcement learning
 - [ ] Chapter 49 — Recommendation and ranking
@@ -128,7 +128,7 @@ Use the [full course index](course/README.md) for notes, diagrams, Q&A, and exer
 - [ ] Chapter 51 — Graph learning
 - [ ] Chapter 52 — Robotics and embodied AI
 
-### Part 11 — Production and responsible AI
+### [AI engineering and responsibility](course/engineering/README.md)
 
 - [ ] Chapter 53 — Models as services
 - [ ] Chapter 54 — MLOps and reproducibility
@@ -136,7 +136,7 @@ Use the [full course index](course/README.md) for notes, diagrams, Q&A, and exer
 - [ ] Chapter 56 — Safety, security, and privacy
 - [ ] Chapter 57 — Governance and user impact
 
-### Part 12 — Advanced study and capstone
+### [Research and capstone](course/research/README.md)
 
 - [ ] Chapter 58 — Advanced practitioner skills
 - [ ] Chapter 59 — Reading research papers

@@ -1,89 +1,58 @@
-# Full AI Course: beginner to advanced
+# Full AI Course: organized by subject
 
-A subject-by-subject course for someone starting with little or no AI background. It connects programming, mathematics, data, classical AI, machine learning, deep learning, NLP, LLMs, other AI fields, and production practice.
+This course is for a learner starting with little or no AI background. Each subject has its own folder so you can see what belongs to Python, mathematics, AI, ML, NLP, LLMs, and other fields.
 
-**Important:** this course can take you from beginner to capable AI builder and prepare you for advanced study. Becoming an expert is an ongoing process of building, reading, evaluating, and specializing over years; no single course can guarantee expertise.
+There are **13 subject folders and 46 detailed chapter files**, covering the 62 topics in the [progress tracker](../PROGRESS.md). Each chapter is a lesson with explanations, examples, Q&A, practice, and a mastery check. Some technical topics include diagrams.
 
-## The learning map
+## Learning path
 
 ```mermaid
 flowchart TD
-    A[Orientation and computing] --> B[Python, Git, SQL]
-    B --> C[Math and data]
-    C --> D[Classical AI and search]
+    A[Foundations] --> B[Python and software skills]
+    B --> C[Mathematics]
+    C --> D[Classical AI]
     D --> E[Machine learning]
-    E --> F[Evaluation and responsible measurement]
-    F --> G[Deep learning]
-    G --> H[Computer vision and NLP]
-    H --> I[Transformers and LLMs]
-    I --> J[Generative AI applications]
-    J --> K[Specialist tracks]
-    K --> L[Deployment, monitoring, safety]
-    L --> M[Research and capstone]
+    E --> F[Deep learning]
+    F --> G[Computer vision and NLP]
+    G --> H[Transformers and LLMs]
+    H --> I[Generative AI systems]
+    I --> J[Specialization]
+    J --> K[Deployment and responsible AI]
+    K --> L[Research and capstone]
 ```
 
-## Course chapters
+## Subject folders
 
-| Part | Subject | Chapters |
-| --- | --- | --- |
-| [0. Foundations](00-foundations-and-study-method.md) | What AI is, how to learn it, how to choose tasks | 1–2 |
-| [1. Computing and Python](01-computing-programming-python.md) | Computer basics, terminal, Git, Python, SQL, algorithms | 3–7 |
-| [2. Mathematics](02-mathematics-for-ai.md) | Algebra, linear algebra, probability, statistics, calculus, optimization | 8–12 |
-| [3. Data and classical AI](03-data-and-classical-ai.md) | Problem framing, data quality, search, logic, planning | 13–17 |
-| [4. Machine learning](04-machine-learning.md) | Supervised, unsupervised, model families, training workflow | 18–22 |
-| [5. Evaluation](05-evaluation-and-model-selection.md) | Splits, metrics, leakage, calibration, robustness, fairness | 23–27 |
-| [6. Deep learning and vision](06-deep-learning-and-vision.md) | Neural nets, gradients, CNNs, transfer learning, vision tasks | 28–32 |
-| [7. NLP](07-nlp-and-language-models.md) | Text processing, embeddings, language tasks, encoder/decoder models | 33–37 |
-| [8. Transformers and LLMs](08-transformers-and-llms.md) | Attention, transformer blocks, pretraining, tuning, inference | 38–42 |
-| [9. Generative AI systems](09-generative-ai-systems.md) | RAG, tool use, agents, image/audio generation, safety | 43–47 |
-| [10. Other AI fields](10-other-ai-fields.md) | Reinforcement learning, recommendations, time series, graphs, robotics | 48–52 |
-| [11. Production and responsible AI](11-production-and-responsible-ai.md) | MLOps, serving, monitoring, security, privacy, governance | 53–57 |
-| [12. Advanced study and capstone](12-advanced-study-and-capstone.md) | Research methods, specialization, capstone, career paths | 58–62 |
+| Subject | Main topics |
+| --- | --- |
+| [Foundations](./foundations/README.md) | AI basics, terminology, task framing, study method |
+| [Python and software foundations](./python/README.md) | Python, algorithms, Git, SQL, environments, APIs |
+| [Mathematics](./mathematics/README.md) | Algebra, linear algebra, probability, statistics, calculus, optimization |
+| [Classical AI](./ai/README.md) | Search, planning, logic, constraints, uncertainty, game reasoning |
+| [Machine learning](./ml/README.md) | Problem framing, supervised and unsupervised learning, evaluation |
+| [Deep learning](./deep-learning/README.md) | Neural networks, backpropagation, regularization, transfer learning |
+| [Computer vision](./computer-vision/README.md) | Images, CNNs, vision tasks, transfer learning, evaluation |
+| [Natural language processing](./nlp/README.md) | Text processing, embeddings, sequence models, language tasks |
+| [Large language models](./llm/README.md) | Transformers, tokenization, pretraining, inference, adaptation |
+| [Generative AI](./generative-ai/README.md) | Prompting, RAG, tool use, agents, image/audio/video, evaluation |
+| [AI specializations](./specializations/README.md) | Reinforcement learning, recommendations, time series, graphs, robotics |
+| [AI engineering and responsibility](./engineering/README.md) | MLOps, deployment, monitoring, security, privacy, governance |
+| [Research and capstone](./research/README.md) | Paper reading, reproducible experiments, advanced study, capstone |
 
-The chapter numbers make it easier to track progress. Each part explains the ideas, shows where they fit, includes review Q&A with answers, and gives practice.
+## Which programming languages?
 
-## How long it takes
+Start with **Python**. Learn **SQL** for databases and basic shell commands for running projects. Add JavaScript/TypeScript if you want a web interface. C/C++ are optional for performance, embedded AI, or robotics. Do not try to learn all languages at once.
 
-- **Core beginner-to-builder route:** roughly 9–15 months at 6–8 focused hours per week.
-- **Advanced specialization:** add sustained project work, deeper math, paper reading, and experience with real users and data.
-- Go at checkpoint pace, not calendar pace. Repeat difficult topics and take breaks.
+## How to use the course
 
-## The languages and tools
+1. Start with [Foundations](./foundations/README.md).
+2. Complete each folder's chapters in order and do the practice before moving on.
+3. Use the topic checklist in [PROGRESS.md](../PROGRESS.md).
+4. Read the folder README to see prerequisites and next steps.
+5. Use the [source guide](./SOURCES.md) for official documentation and primary research papers.
 
-| Tool or language | Why it is here | When |
-| --- | --- | --- |
-| Python | Main language for data, ML, deep learning, and AI applications | Start |
-| SQL | Query structured data from databases | After Python basics |
-| Shell / command line | Run programs, move files, manage environments | Alongside Python |
-| Git and GitHub | Save versions and share projects | From the start |
-| NumPy and pandas | Arrays and tables | Data module |
-| scikit-learn | Classical ML workflows | ML module |
-| PyTorch | Neural-network training | Deep-learning module |
-| JavaScript / web basics | Optional interface for a browser-based demo | After core |
-| C or C++ | Optional performance, robotics, or systems specialization | Advanced track |
+The core beginner-to-builder route takes roughly **9–15 months at 6–8 focused hours per week**. Advanced specialization and expertise require continuing projects, deeper theory, paper reading, and experience with real data and users over time. This course prepares you for that work; it does not promise expertise from reading alone.
 
-Do not try to learn several programming languages at once. Start with Python; add SQL because data work often uses databases. Add other languages only when a project needs them.
+## What counts as learning
 
-## How to study
-
-For each chapter:
-
-1. Read a short section and explain it back in plain language.
-2. Work through the example by hand or in code.
-3. Answer the questions before checking the answers.
-4. Complete one exercise and record what failed.
-5. Revisit the mastery check later, without looking at notes.
-
-Aim for about 60–70% hands-on practice and 30–40% reading or watching. When asking an AI assistant for help, request a hint or explanation, then verify the result yourself.
-
-Use the [course progress tracker](../PROGRESS.md), the [project template](../templates/project-template.md), and the [source guide](SOURCES.md). The original [lesson notes](../lessons/README.md) provide additional short explanations and Q&A.
-
-## What completion means
-
-Finishing the pages is not the same as knowing the material. For each major topic, you should be able to:
-- explain the idea without memorized jargon;
-- implement a tiny example;
-- choose a suitable method and a baseline;
-- evaluate it on data not used to tune it;
-- explain its failure modes and limits;
-- write down a reproducible project report.
+For each chapter, aim to explain the idea in plain language, solve a small example, implement or use the method, evaluate it fairly, and name a failure mode. Finishing a page without being able to do those things is a signal to practice more.

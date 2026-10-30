@@ -2,7 +2,7 @@
 
 A guided sequence from zero coding experience to building, evaluating, and sharing practical AI projects.
 
-For the expanded subject-by-subject curriculum, follow the [full 62-chapter course](course/README.md). The timeline below is the core beginner-to-builder route; advanced specialization and expertise take sustained practice beyond that schedule.
+For the expanded subject-by-subject curriculum, follow the [full course index](course/README.md) and study through its linked subject folders. The timeline below is the core beginner-to-builder route; advanced specialization and expertise take sustained practice beyond that schedule.
 
 **Pace:** about 7–9 months at 6–8 focused hours per week. Weeks are estimates. Move on when you can do the checkpoint, not when a calendar says so. If you already know a stage, use its checkpoint to decide whether to review or continue.
 
@@ -24,7 +24,7 @@ For the expanded subject-by-subject curriculum, follow the [full 62-chapter cour
 
 ## Stage 0 — Get ready
 
-**Detailed lesson:** [A map of AI](lessons/00-ai-map.md).
+**Subject folder:** [Foundations](course/foundations/README.md).
 
 ### Learn
 - What AI, machine learning, deep learning, and generative AI mean.
@@ -46,7 +46,7 @@ You can run a small Python program, find its output, and save your work.
 
 ## Stage 1 — Python foundations
 
-**Detailed lesson:** [Python from zero](lessons/01-python-from-zero.md).
+**Subject folder:** [Python and software foundations](course/python/README.md).
 
 **Suggested time:** 4–5 weeks
 
@@ -72,7 +72,7 @@ Build one small program from a blank file, use functions to organize it, handle 
 
 ## Stage 2 — Math and data
 
-**Detailed lesson:** [Math for AI](lessons/02-math-for-ai.md).
+**Subject folder:** [Mathematics](course/mathematics/README.md).
 
 **Suggested time:** 3–4 weeks. Keep practicing these ideas throughout the roadmap.
 
@@ -96,7 +96,7 @@ You can describe a dataset, calculate a simple summary, read a chart, and explai
 
 ## Stage 3 — AI foundations
 
-**Detailed lesson:** [Classical AI: search and reasoning](lessons/04-classical-ai-search-and-reasoning.md).
+**Subject folder:** [Classical AI](course/ai/README.md).
 
 **Suggested time:** 2–3 weeks
 
@@ -119,7 +119,7 @@ You can explain how your program represents a problem, why it chooses a path or 
 
 ## Stage 4 — Machine learning
 
-**Detailed lessons:** [Machine-learning foundations](lessons/05-machine-learning-foundations.md) and [evaluation and generalization](lessons/06-evaluation-and-generalization.md).
+**Subject folder:** [Machine learning](course/ml/README.md).
 
 **Suggested time:** 5–6 weeks
 
@@ -144,7 +144,7 @@ Your project keeps test data out of training and preprocessing, compares against
 
 ## Stage 5 — Deep learning
 
-**Detailed lesson:** [Neural networks and deep learning](lessons/07-neural-networks-and-deep-learning.md).
+**Subject folders:** [Deep learning](course/deep-learning/README.md) and [computer vision](course/computer-vision/README.md).
 
 **Suggested time:** 5–6 weeks
 
@@ -170,7 +170,7 @@ You can describe what the model receives, what it predicts, how its loss changes
 
 ## Stage 6 — Choose a specialty
 
-**Detailed lesson:** [AI specializations](lessons/08-ai-specializations.md).
+**Subject folder:** [Specializations](course/specializations/README.md).
 
 **Suggested time:** 3–5 weeks
 
@@ -191,7 +191,7 @@ You can explain why the chosen model fits the data, compare it with a simple bas
 
 ## Stage 7 — Generative AI and large language models
 
-**Detailed lessons:** [Transformers and LLMs](lessons/09-transformers-and-llms.md) and [generative AI applications](lessons/10-generative-ai-applications.md).
+**Subject folders:** [NLP](course/nlp/README.md), [LLMs](course/llm/README.md), and [generative AI](course/generative-ai/README.md).
 
 **Suggested time:** 4–5 weeks
 
@@ -215,7 +215,7 @@ You can identify what came from the language model and what came from retrieved 
 
 ## Stage 8 — Ship a capstone responsibly
 
-**Detailed lessons:** [Advanced topics and research](lessons/11-advanced-topics-and-research.md) and [production and responsible AI](lessons/12-production-and-responsible-ai.md).
+**Subject folders:** [Engineering and responsible AI](course/engineering/README.md) and [research](course/research/README.md).
 
 **Suggested time:** 3–4 weeks
 

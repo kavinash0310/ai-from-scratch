@@ -1,6 +1,6 @@
 # Course lesson notes
 
-> For the complete subject-by-subject course with 62 chapters, diagrams, deeper explanations, Q&A, and exercises, start at the [full course index](../course/README.md).
+> The files in this folder are companion review notes. The full detailed course is organized by subject under [course/](../course/README.md), including dedicated folders for Python, mathematics, AI, ML, NLP, LLMs, and more.
 
 
 
