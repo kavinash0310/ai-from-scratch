@@ -71,3 +71,7 @@ The core beginner-to-builder route takes roughly **9–15 months at 6–8 focuse
 ## What counts as learning
 
 For each chapter, aim to explain the idea in plain language, solve a small example, implement or use the method, evaluate it fairly, and name a failure mode. Finishing a page without being able to do those things is a signal to practice more.
+
+## Read the course as a textbook
+
+The lesson files provide a guided chapter sequence. Open the [textbook index](./TEXTBOOK.md) for 13 longer subject volumes with worked examples, deeper explanations, and practice.

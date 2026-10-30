@@ -78,3 +78,19 @@ For each generated answer, check whether every factual claim is supported by a c
 Exercise: complete the [retrieval evaluation lab](../../labs/generative-ai/11_retrieval_evaluation.py), then use [Project 05](../../projects/05-grounded-assistant.md) to build a bounded system.
 
 Further reading: [Retrieval-Augmented Generation](https://arxiv.org/abs/2005.11401), [Diffusion Models](https://arxiv.org/abs/2006.11239), and the [NIST AI Risk Management Framework](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/).
+
+## Deeper generative system design
+
+A retrieval-augmented generation pipeline has an ingestion path and a question path. Ingestion extracts text, tracks source and permissions, splits passages, computes embeddings, and indexes them. At query time, the system may rewrite the question, retrieve candidates, filter by permissions, rerank, assemble evidence, generate a response, and cite sources.
+
+Test retrieval separately from generation. Does the relevant passage appear near the top? Does each answer claim follow from the cited passage? Are sources current? A fluent response does not prove that retrieval worked. Chunk boundaries, query wording, stale documents, and reranking can each break the pipeline.
+
+A model-produced tool call is untrusted input. Application code should validate its schema, check permission, execute only allowed operations, and report actual outcomes. Limit agent steps, time, and cost. Require confirmation for consequential actions and preserve a stopping condition. A deterministic workflow is often easier to audit than an open-ended agent.
+
+Prompt injection can arrive in user text, a retrieved document, a web page, or tool output. Treat those as untrusted data. Enforce authorization in application code rather than trusting natural-language instructions. Do not expose secrets to the model without need. Test direct and indirect injection, malformed tool arguments, data exfiltration, and tool failure.
+
+Measure the complete application: task success, evidence support, citations, refusal when evidence is missing, latency, cost, escalations, and user corrections. Protect logs and set a retention policy.
+
+Practice: design a document assistant limited to public policies. Specify source tracking, access checks, retrieval metrics, citation requirements, abstention when evidence is missing, and one injection test.
+
+Further reading: [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) and [Hugging Face course](https://huggingface.co/learn/llm-course/en/chapter1/1).

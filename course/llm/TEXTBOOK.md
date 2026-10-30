@@ -76,3 +76,15 @@ If the training text often contains a false statement, next-token training may a
 Exercise: run the [attention lab](../../labs/llm/10_attention.py). Confirm causal weights for future positions are zero and every row sums to one. Then contrast the lab's numerical operation with the repeated next-token inference loop described above.
 
 Further reading: [Attention Is All You Need](https://arxiv.org/abs/1706.03762), [BERT](https://arxiv.org/abs/1810.04805), and [LoRA](https://arxiv.org/abs/2106.09685).
+
+## Deeper transformer and inference concepts
+
+For each token, a transformer computes query, key, and value vectors. Query-key similarity determines weights used to combine values. Similarities are scaled by the square root of the key dimension before softmax to keep numbers in a useful range. A causal mask prevents a position from seeing future tokens during next-token training. Multiple heads use different learned projections, but a head does not necessarily map neatly to one human-readable concept.
+
+At inference, the model produces scores for possible next tokens. Greedy decoding selects the largest score; sampling draws from a probability distribution. Temperature sharpens or flattens that distribution. Top-k restricts to k choices; nucleus sampling retains a set with chosen cumulative probability. These settings change variability, not factuality. Low temperature does not guarantee truth.
+
+A context window limits input and generated tokens per call. Long context increases memory and compute; retrieval can supply relevant passages without resending an entire archive. Pretraining updates model parameters on a broad corpus. Fine-tuning updates parameters for a target task. Parameter-efficient tuning changes a smaller parameter subset. Retrieval supplies external knowledge at inference without necessarily changing weights. Choose according to whether the need is new knowledge, task behavior, or access to changing documents.
+
+Language models generate likely continuations, not verified database records. They can answer confidently when evidence is absent. Retrieval may help but indexing, search, freshness, and citation use can all fail. Evaluate task success, factual support, refusal behavior, latency, and cost. Inspect adversarial and out-of-distribution examples.
+
+Further reading: [Attention Is All You Need](https://arxiv.org/abs/1706.03762), [Hugging Face LLM course](https://huggingface.co/learn/llm-course/en/chapter1/1), and [Stanford CS224N](https://web.stanford.edu/class/cs224n/).

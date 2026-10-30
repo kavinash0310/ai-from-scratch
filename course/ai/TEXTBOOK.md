@@ -96,3 +96,19 @@ A classical solution may fail when the state space is enormous, rules are hard t
 Exercise: define a search problem for crossing a river with a boat that holds two people, where some pairs cannot be left alone. State should include both river banks and boat location. Legal actions move one or two people with the boat. The goal has everyone on the destination bank. The constraints determine whether a state is legal.
 
 Continue to [machine learning](../ml/README.md) and run the [search lab](../../labs/ai/03_search.py).
+
+## Deeper search and reasoning
+
+Breadth-first search explores states by increasing number of actions. With equal action costs, it finds the path with the fewest actions. Uniform-cost search expands the partial route with the least accumulated cost and, with nonnegative costs, finds a least-cost route. Depth-first search uses little frontier memory but may follow a deep branch and does not generally find the cheapest solution.
+
+A* scores a state with f(n)=g(n)+h(n), where g is cost already paid and h estimates remaining cost. An admissible heuristic never overestimates the true remaining cost. Under the algorithm's assumptions this supports an optimal solution. A stronger heuristic can reduce the states expanded, but may cost more to compute. Guarantees belong to a precise algorithm and assumptions, not just the letter A-star.
+
+A constraint satisfaction problem has variables, possible values (domains), and constraints. In a timetable, variables are classes, domains are time slots, and constraints prevent a teacher from teaching two classes at once. Backtracking assigns one variable at a time and undoes a choice when it causes a conflict. Choosing the most constrained variable first exposes dead ends early; trying the least constraining value preserves options.
+
+Probability supports decisions under uncertainty. If a failure has probability 0.05 and causes a loss of 100, expected loss is 5. An inspection costing 2 may be worthwhile, but only after accounting for inspection errors and side effects. Bayesian networks represent conditional dependencies, but an edge in an observational model does not by itself prove causation.
+
+Reasoning traps include assuming a greedy local choice is globally best, treating a probability as a guarantee, or treating a game opponent as perfectly adversarial when it is not. For any problem, state the representation, legal actions, costs, goal, assumptions, and success criterion before coding. Compare the result with a simple baseline.
+
+Practice: give one edge in a maze a high cost. Explain why a least-cost route may use more steps than a shortest-in-steps route. Then construct a constraint problem with three tasks and two time slots and show where backtracking occurs.
+
+Further reading: [Berkeley CS188](https://inst.eecs.berkeley.edu/~cs188/) and [AIMA resources](https://aima.cs.berkeley.edu/).

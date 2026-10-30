@@ -61,3 +61,15 @@ This project demonstrates classification, but not production readiness. Handwrit
 **Does a high test accuracy prove robust vision?** No. The test distribution may omit lighting, camera, or subgroup conditions that matter.
 
 Exercise: use the [convolution lab](../../labs/computer-vision/08_convolution.py). Predict its output shape before running it; then flip the kernel and explain the sign change. Continue to the [deep-learning textbook](../deep-learning/README.md).
+
+## Deeper vision practice
+
+Data augmentation encodes an invariance assumption: the transformed image should retain its label. A small crop may preserve a cat label; rotating a handwritten 6 by 180 degrees may make it a 9. Apply random augmentation to training data only. In segmentation, apply geometric transforms to image and mask together, using interpolation appropriate for discrete class IDs.
+
+Classification labels an image, object detection predicts categories and boxes, semantic segmentation labels pixels, and instance segmentation also separates objects of the same class. Intersection over Union is overlap area divided by union area. Metrics aggregate results in different ways, so read the evaluation protocol and report per-class behavior where relevant.
+
+A model may use shortcuts such as background, watermark, or camera type instead of the intended object. Inspect mistakes by lighting, geography, capture device, and image quality. Images may contain faces, homes, medical conditions, or license plates; limit collection, access, and retention. A benchmark score does not itself grant permission to analyze real people.
+
+Practice: define how a partially hidden object should be labeled. Explain how your rule changes the training labels and evaluation, then identify one image slice likely to be harder.
+
+Further reading: [COCO evaluation](https://cocodataset.org/#detection-eval) and [PyTorch tutorials](https://pytorch.org/tutorials/).

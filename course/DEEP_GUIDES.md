@@ -34,3 +34,7 @@ For a consolidated model-family comparison and core AI/ML terminology, see the [
 6. State one assumption, one failure mode, and one test you would add before using the method.
 
 A learner becomes advanced by repeating this cycle with increasingly realistic data, larger projects, primary sources, and honest evaluation—not by collecting definitions alone.
+
+## Textbook volumes
+
+The [textbook index](TEXTBOOK.md) links the long-form chapters for all 13 subjects. The subject READMEs and chapter pages link to their matching volume.

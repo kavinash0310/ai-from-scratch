@@ -1,5 +1,7 @@
 # Chapter 3 — Time-series forecasting
 
+> **Book-length subject volume:** For expanded explanations, worked examples, review questions, and practice, read the [specializations textbook](TEXTBOOK.md).
+
 > **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
 
 Time-series observations are ordered in time and may contain trend, seasonality, cycles, and sudden shifts. Define the forecast horizon and the information cutoff: what will be known when the prediction is made?

@@ -76,3 +76,7 @@ You will learn how the pieces work and implement small algorithms yourself. You 
 ## Your first step
 
 Open [Stage 0 in the roadmap](ROADMAP.md#stage-0--get-ready), write your goal in [PROGRESS.md](PROGRESS.md), and start with a tiny Python program.
+
+## Textbook course
+
+Start the subject-by-subject learning path at the [AI course textbook index](course/TEXTBOOK.md), then use its linked lessons, labs, projects, and mastery checks.

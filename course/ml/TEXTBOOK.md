@@ -130,3 +130,19 @@ First train a majority baseline. Split by date so the test period is later. Fit 
 5. Save preprocessing, model, split, metric, and limitation notes.
 
 A strong solution makes its assumptions visible and does not use the test set to tune repeatedly. Continue to the [deep-learning textbook](../deep-learning/README.md), or use the [ML model comparison lab](../../labs/ml/19_model_family_comparison.py).
+
+## Deeper evaluation: objective, threshold, and leakage
+
+A loss function gives the learner a training penalty. A metric summarizes behavior for comparison. A threshold turns a score into an action. Calibration asks whether predictions stated as probabilities match observed frequencies. These are related but different. If missing a machine failure costs 100 and inspecting costs 5, a predicted risk of 0.3 may justify inspection even though it is below 0.5. A threshold depends on error costs and capacity, not a universal convention.
+
+Training data fit parameters. Validation data guide model choices. A test set estimates final performance after choices are complete. Repeatedly tuning against the test score turns it into validation data. Cross-validation rotates validation folds; it does not fix leakage or an inappropriate split.
+
+Leakage occurs when the training process uses information unavailable at prediction time or lets evaluation data influence choices. Examples: a post-outcome field used as a feature; scaling the entire dataset before splitting; the same person appearing in both train and test; repeated test-score tuning. Ask whether each field would really exist at the moment the prediction is needed. Keep related people, devices, documents, or time periods grouped when deployment requires that separation.
+
+Accuracy can mislead on rare events. If one in 1,000 transactions is fraud, predicting “not fraud” every time yields 99.9% accuracy while catching zero fraud. Precision asks what share of alerts are true positives; recall asks what share of actual positives are caught. A confusion matrix gives counts at one threshold. Review actual counts, alert capacity, and costs alongside rates.
+
+A robust evaluation states sample size, split rule, metric, uncertainty where possible, and important slices. Keep a simple baseline. A complex model should earn its complexity with a meaningful improvement.
+
+Questions: Why can training loss fall while test performance worsens? The learner may fit noise or exploit a mismatch. Why compare slices? An aggregate average can hide a subgroup failure. Why is a score not itself a decision? Someone must choose an action policy and threshold based on costs.
+
+Further reading: [scikit-learn model evaluation](https://scikit-learn.org/stable/modules/model_evaluation.html), [cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html), and [Google dataset splitting](https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets).

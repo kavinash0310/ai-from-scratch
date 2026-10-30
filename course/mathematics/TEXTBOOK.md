@@ -109,3 +109,21 @@ Exercise: predict y for x=4, w=2, b=1; calculate dot product [2,1] dot [3,-1]; c
 ## 9. How math connects to the course
 
 Algebra describes simple predictors. Linear algebra describes batches of features and model weights. Probability and statistics describe data uncertainty and evaluation. Calculus provides gradients. Optimization uses gradients to fit parameters. These topics recur in logistic regression, neural networks, attention, embeddings, and many other areas. Continue to [machine learning](../ml/README.md) and the [gradient-descent lab](../../labs/math/02_gradient_descent.py).
+
+## Deeper probability, derivatives, and numerical thinking
+
+Conditional probability asks how likely A is when B is known. Bayes' rule reverses a conditional relationship: P(A given B) = P(B given A) P(A) / P(B). The base rate matters. If only 1% of 10,000 messages are phishing, a detector with 90% sensitivity catches about 90 phishing messages. With a 5% false-positive rate, it also flags about 495 ordinary messages. Only about 15% of the 585 alerts are phishing. “90% accurate at catching phishing” does not mean “90% of alerts are phishing.”
+
+A sample statistic estimates a population property. A result measured on a small sample has uncertainty; a difference between 91% and 92% may reflect which examples were sampled. A confidence interval is produced under assumptions about sampling and the statistic. It does not repair biased data or a test set that influenced model choice.
+
+The chain rule explains backpropagation. If a = f(z), z = wx+b, and loss L depends on a, then dL/dw = (dL/da)(da/dz)(dz/dw). Since dz/dw=x, the gradient combines the effect of changing the output, activation, and weight. A computation graph makes these dependencies explicit; automatic differentiation applies the chain rule to the operations in code. If labels or loss are wrong, correct gradients still optimize the wrong goal.
+
+Shapes are part of algebra. If X is examples-by-features and w has one value per feature, Xw produces one score per example. Transpose swaps axes; matrix multiplication is not generally commutative. Check dimensions as you would check units in physics.
+
+Computers use finite precision. Very large exponentials may overflow; tiny values may underflow. Stable softmax calculations subtract the largest score before exponentiation. Feature scaling can improve optimization when units differ greatly, but learned scaling statistics must be fit only on training data.
+
+Questions: What direction does a gradient point? Toward the steepest local increase of a differentiable scalar function. Why update opposite it? To reduce loss locally. Does a smaller loss prove a useful model? No: leakage, a wrong split, or a mismatched objective can yield low loss and poor real-world decisions.
+
+Practice the base-rate example with a prevalence of 0.1%, sensitivity of 95%, and false-positive rate of 1%. Compute the approximate number of true and false alerts among 100,000 cases, then explain why precision differs from sensitivity.
+
+Further reading: [Seeing Theory](https://seeing-theory.brown.edu/) and [3Blue1Brown linear algebra](https://www.3blue1brown.com/topics/linear-algebra).

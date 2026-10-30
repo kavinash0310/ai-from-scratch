@@ -63,3 +63,17 @@ Next, compare a pretrained encoder and look for improvements on the difficult ca
 **Can high F1 prove a text model is fair?** No. It may hide subgroup gaps, label bias, or differences in how errors affect users.
 
 Exercise: run the [TF-IDF lab](../../labs/nlp/09_tfidf_classifier.py). Inspect the vocabulary and every held-out error. Then explain why the tiny report should not be treated as a reliable product benchmark. Continue to [LLMs](../llm/README.md).
+
+## Deeper text processing and evaluation
+
+A tokenizer maps text to units and integer IDs. Word tokenization is easy to inspect but struggles with unknown words and languages without spaces. Character tokenization avoids unknown whole words but creates long sequences. Subword units are a compromise. Token IDs are addresses, not meanings; an embedding table learns vectors for them. Inspect punctuation, emoji, code, long words, and target languages.
+
+A bag-of-words model counts terms and discards order. TF-IDF emphasizes terms frequent in one document but uncommon in the corpus. It is a valuable baseline for classification and search, but cannot naturally understand synonymy or word order. N-grams preserve short sequences such as “not good.”
+
+Metrics must reflect the task. Classification needs valid labels and splits without duplicate leakage. Translation scores based on word overlap may penalize a valid paraphrase. Summarization should be checked for factual support, coverage, omissions, and readability. Retrieval needs relevance judgments at the ranking positions that matter. Inspect errors by language, dialect, length, code-switching, and formatting.
+
+Text can reveal names, addresses, health details, and confidential work. Removing direct identifiers does not guarantee anonymity. Collect only necessary information, control access, decide retention, and check rights and permissions. Moderation models can over-flag dialects; review false positives and false negatives.
+
+Questions: Why can static embeddings miss sentence meaning? A token's vector alone does not express how context changes its meaning. Why keep classical NLP baselines? They are fast, useful, and show whether complexity is earning a gain.
+
+Further reading: [NLTK book](https://www.nltk.org/book/) and [Hugging Face Tokenizers](https://huggingface.co/docs/tokenizers/).

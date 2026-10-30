@@ -123,3 +123,19 @@ The answer is good because it distinguishes a suggestion from an irreversible ac
 ## 8. What to remember
 
 AI is a field, not one algorithm. Always define the task before choosing a model. Distinguish training from inference and model from application. A benchmark measures behavior on a particular dataset; it does not automatically prove real-world usefulness. Continue with [Python](../python/README.md), [mathematics](../mathematics/README.md), or the [course index](../README.md).
+
+## Deeper map: systems, agents, and task boundaries
+
+A symbolic system represents knowledge explicitly with symbols, rules, or constraints. A statistical system estimates patterns from data. A generative system produces new outputs according to learned structure. A hybrid system combines these methods, such as a language model paired with a database, a permission checker, and a search engine. These categories describe how a system is built; the application should still be judged by its behavior and risk.
+
+An **agent** observes an environment, chooses an action, and receives a new observation. A route planner observes a map and traffic, chooses a route, and receives updated conditions. A robot observes sensors, acts through motors, and measures the result. The loop raises useful design questions: what can the system observe, which actions are permitted, what counts as success, how many steps can it take, and what happens when it is uncertain?
+
+When someone says “add AI,” translate that request into an outcome. Define the user, decision, inputs available at decision time, costs of mistakes, baseline, metric, and fallback. A library assistant might search the catalogue and show cited book records. It should not invent a title. A keyword search may already solve the problem; a learned model should earn its complexity by improving a measured outcome.
+
+AI is not a single capability. Most deployed systems are narrow: they perform a bounded task under particular conditions. A picture classifier is not automatically a planner or an expert in medicine. A model score describes behavior on a chosen evaluation, not a universal guarantee.
+
+Practice: choose an AI feature and draw its boundary. List inputs, outputs, objective, hidden information, allowed actions, one likely failure, and a safe fallback. Then name one measurement that tests usefulness and one test that checks harm. Explain which parts are learned and which are ordinary software.
+
+Questions: Does a plausible answer prove understanding? No; plausibility is an output property, while understanding is a broader claim that needs evidence. Does a benchmark score prove safe deployment? No; deployment adds users, distribution shift, privacy, infrastructure, and consequences. Should beginners start from a model name? Start from the task and baseline, then select a method whose assumptions fit.
+
+Further reading: [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) and [Stanford Encyclopedia of Philosophy: Artificial Intelligence](https://plato.stanford.edu/entries/artificial-intelligence/).

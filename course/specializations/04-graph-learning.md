@@ -1,5 +1,7 @@
 # Chapter 4 — Graph learning
 
+> **Book-length subject volume:** For expanded explanations, worked examples, review questions, and practice, read the [specializations textbook](TEXTBOOK.md).
+
 > **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
 
 A graph contains nodes and edges. Nodes might represent people, chemicals, or locations; edges represent relationships. Graphs may be directed, weighted, temporal, or have multiple node and edge types.

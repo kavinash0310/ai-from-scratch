@@ -1,5 +1,7 @@
 # Transformers and attention — from first principles
 
+> **Book-length subject volume:** For expanded explanations, worked examples, review questions, and practice, read the [llm textbook](TEXTBOOK.md).
+
 > **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
 
 This chapter builds the Transformer one idea at a time: text becomes tokens, tokens become vectors, attention mixes context, and repeated blocks transform those vectors into useful predictions.

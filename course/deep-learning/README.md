@@ -13,3 +13,7 @@ Prerequisites: Python, vectors and matrices, derivatives, and core ML evaluation
 ## Expanded lesson notes
 
 Read the [full beginner notes](DEEP_NOTES.md) for step-by-step explanations, key terms, worked examples, Q&A, and practice that expand the chapters in this folder.
+
+## Textbook volume
+
+Read the [long-form subject textbook](TEXTBOOK.md) for expanded explanations, worked examples, deeper topic coverage, review questions, and practice. Pair it with the lesson sequence and lab exercises.

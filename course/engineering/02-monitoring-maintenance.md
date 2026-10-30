@@ -1,5 +1,7 @@
 # Chapter 2 — Monitoring and model maintenance
 
+> **Book-length subject volume:** For expanded explanations, worked examples, review questions, and practice, read the [engineering textbook](TEXTBOOK.md).
+
 > **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
 
 Monitor software health: errors, latency, throughput, and spend. Monitor data: missing fields, ranges, and input distribution. Monitor model quality: delayed labels, error rates, confidence, and overrides.

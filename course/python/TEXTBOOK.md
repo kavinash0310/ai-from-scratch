@@ -142,3 +142,21 @@ Start with one valid record, then several records, then empty input, then invali
 ## 10. Mastery target
 
 Build a command-line expense tracker with functions, validated input, file persistence, readable errors, a README, and Git history. Explain each data structure and failure path. Continue to [mathematics](../mathematics/README.md) and the [Python labs](../../labs/README.md).
+
+## Deeper software habits for machine learning
+
+A function should have one clear job, named inputs, and a predictable return value. Printing is a side effect; returning a result allows other code to reuse it and tests to inspect it. Keep side effects such as file access, network calls, and user prompts near the outer edge of a program. A module groups reusable names in a file; importing it should not unexpectedly start training or download data.
+
+Inspect data before analyzing it. Check row counts, column names, types, missing values, duplicates, ranges, and representative examples. Missing is not the same as zero: zero may be a genuine measurement. A numeric-looking string may fail in arithmetic. Record what each field means and when it becomes available. For ML, a transformation that learns statistics, such as scaling or imputation, must be fit on training data only and then reused on validation and test data.
+
+Big-O describes how computational work grows with input size. A single pass over n records is O(n); comparing every pair is commonly O(n squared). It is not a stopwatch and does not replace measurement, but it helps identify algorithms that will become impractical as datasets grow. First build a clear correct version, then profile representative inputs and optimize the actual bottleneck.
+
+A traceback identifies the exception and the calls that led to it. Reduce a failure to the smallest input that still reproduces it. Test boundaries: empty input, one item, duplicates, missing fields, malformed values, and exact threshold values. A unit test checks a small function; an integration test checks components together; a regression test preserves a previously fixed failure.
+
+A random seed helps repeat randomized experiments but does not promise identical results across versions, hardware, parallel kernels, or all GPU operations. Record code revision, data version, library versions, configuration, and seed. Git records source changes; a virtual environment isolates package dependencies; neither automatically versions large private datasets or model artifacts.
+
+Questions: Why use a virtual environment? It limits dependency conflicts between projects. Why inspect array shapes? The dimensions encode which axis represents examples, features, channels, or time, and a shape error can produce a wrong result without crashing. Why handle API timeouts? Remote services can fail, respond slowly, rate-limit, or change schemas; production code must handle these states explicitly.
+
+Practice: write a function that summarizes a list of records. State what it does with missing and malformed values. Test empty input, a valid record, duplicates, a missing value, and invalid type. Explain why each result is correct.
+
+Further reading: [Python tutorial](https://docs.python.org/3/tutorial/) and [Python Packaging User Guide](https://packaging.python.org/en/latest/).

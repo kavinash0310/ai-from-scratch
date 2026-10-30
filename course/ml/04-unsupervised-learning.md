@@ -1,5 +1,7 @@
 # Chapter 4 — Unsupervised learning
 
+> **Book-length subject volume:** For expanded explanations, worked examples, review questions, and practice, read the [ml textbook](TEXTBOOK.md).
+
 > **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
 
 ## Learn without a target

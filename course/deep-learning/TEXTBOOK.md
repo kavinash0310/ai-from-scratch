@@ -75,3 +75,17 @@ Change one factor at a time when investigating. If you change the architecture, 
 Exercise: sketch input -> linear layer -> activation -> output -> loss, then draw gradient flow backward. Explain which operations occur during training and which occur during inference. Answer: inference normally computes forward outputs with fixed weights; training also calculates gradients and updates weights.
 
 Continue to [computer vision](../computer-vision/README.md), [NLP](../nlp/README.md), and the [backpropagation lab](../../labs/deep-learning/07_backprop_xor.py).
+
+## Deeper training loop and diagnosis
+
+A mini-batch goes through a forward pass to produce predictions. A loss compares these predictions with labels. Backpropagation computes derivatives with respect to trainable parameters; an optimizer updates them. Many frameworks accumulate gradients, so old gradients must be cleared before the next step. Training and inference modes can differ for dropout and batch normalization.
+
+A useful debugging sequence is: check input and output shapes; check labels and loss; verify that predictions and gradients are finite; then try to overfit a tiny subset. If a model cannot fit a few examples, first investigate data, labels, architecture, loss, and optimizer. Only then investigate generalization on larger data.
+
+Learning curves compare training and validation performance. Low training error with high validation error may indicate overfitting. High error on both may mean underfitting, too little training, bad preprocessing, or a bug. Weight decay discourages large weights, dropout randomly removes activations during training, augmentation introduces label-preserving variations, and early stopping uses validation behavior. Every technique assumes something: flipping a medical image is invalid if orientation changes the diagnosis.
+
+Normalization can improve optimization when feature scales differ. Batch normalization and layer normalization use different axes and statistics; neither is the same as cleaning raw inputs. Padding and masks matter in sequence models. Record architecture, optimizer, learning rate, batch size, preprocessing, seed, software, and checkpoint so a result can be interpreted.
+
+Questions: What does batch size change? The number of examples used for each gradient estimate, affecting memory and optimization noise. Why can too-high a learning rate fail? Updates can jump past useful parameter regions. Does automatic differentiation verify the model's intended meaning? No, it differentiates the computations written.
+
+Further reading: [PyTorch beginner tutorials](https://docs.pytorch.org/tutorials/beginner/basics/intro.html) and [autograd tutorial](https://docs.pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html).
