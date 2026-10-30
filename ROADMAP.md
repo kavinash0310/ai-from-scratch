@@ -2,7 +2,7 @@
 
 A guided sequence from zero coding experience to building, evaluating, and sharing practical AI projects.
 
-**Pace:** about 6–9 months at 6–8 focused hours per week. Weeks are estimates. Move on when you can do the checkpoint, not when a calendar says so. If you already know a stage, use its checkpoint to decide whether to review or continue.
+**Pace:** about 7–9 months at 6–8 focused hours per week. Weeks are estimates. Move on when you can do the checkpoint, not when a calendar says so. If you already know a stage, use its checkpoint to decide whether to review or continue.
 
 ## The complete route
 
