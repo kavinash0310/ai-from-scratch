@@ -36,6 +36,10 @@ The core beginner-to-builder route takes about **7–9 months at 6–8 focused h
 
 The [full course](course/README.md) is organized into 13 subject folders, including [Python](course/python/README.md), [mathematics](course/mathematics/README.md), [AI](course/ai/README.md), [ML](course/ml/README.md), [NLP](course/nlp/README.md), and [LLMs](course/llm/README.md). It contains 46 detailed chapter files and a 62-topic progress tracker.
 
+## Hands-on labs, projects, and mastery checks
+
+The [runnable lab track](labs/README.md) includes from-scratch and library-based exercises. The [project ladder](projects/README.md) adds staged work with a shared rubric; [mastery checks](assessments/MASTERY_CHECKS.md) and the [100-point scorecard](assessments/MASTERY_SCORECARD.md) help verify understanding.
+
 ## Detailed course lessons
 
 The lesson library teaches each stage from the ground up with detailed notes, examples, review questions and answers, practice tasks, and mastery checks. Start at the [course index](lessons/README.md); use the [roadmap](ROADMAP.md) for pacing and project milestones.

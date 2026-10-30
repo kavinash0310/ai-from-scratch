@@ -143,3 +143,19 @@ Use the [full course index](course/README.md) for the subject folders and detail
 - [ ] Chapter 60 — Reproducible experiments
 - [ ] Chapter 61 — Specialization and research questions
 - [ ] Chapter 62 — Capstone from question to evidence
+
+
+## Runnable labs and project checkpoints
+
+Complete a lab by running it, explaining its output, changing one assumption, and recording what changed. Complete a project by submitting code and a report graded with the project rubric.
+
+| Checkpoint | Link | Complete |
+| --- | --- | --- |
+| Python, math, and search labs | [Lab index](labs/README.md) | [ ] |
+| ML and deep-learning implementation labs | [Lab index](labs/README.md) | [ ] |
+| Vision, NLP, attention, and retrieval labs | [Lab index](labs/README.md) | [ ] |
+| Monitoring lab | [Lab index](labs/README.md) | [ ] |
+| Beginner data project | [Project 01](projects/01-data-investigation.md) | [ ] |
+| Tabular ML project | [Project 02](projects/02-tabular-ml.md) | [ ] |
+| Specialty project and capstone | [Project ladder](projects/README.md) | [ ] |
+| Mastery assessment | [Checks](assessments/MASTERY_CHECKS.md) · [scorecard](assessments/MASTERY_SCORECARD.md) | [ ] |

@@ -34,6 +34,10 @@ AI is a wide field. Reaching advanced ability takes continued projects and study
 | [11. Advanced topics and research](11-advanced-topics-and-research.md) | Research habits and advanced model families | Read a paper and plan a reproducible experiment |
 | [12. Production and responsible AI](12-production-and-responsible-ai.md) | Deployment, monitoring, privacy, safety, reliability | Ship and maintain an AI system responsibly |
 
+## Practice and mastery system
+
+Pair each lesson with a relevant [runnable lab](../labs/README.md), then complete a [graded project](../projects/README.md). Use [mastery checks](../assessments/MASTERY_CHECKS.md) before moving ahead and record evidence in the [100-point scorecard](../assessments/MASTERY_SCORECARD.md).
+
 ## Prerequisites and pace
 
 Start with Lesson 00. You need only basic arithmetic and access to a computer or browser notebook. Lesson 01 teaches programming. Lesson 02 teaches the math gradually; you are not expected to know calculus or linear algebra in advance.

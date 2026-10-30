@@ -40,6 +40,12 @@ flowchart TD
 | [Research and capstone](./research/README.md) | Paper reading, reproducible experiments, advanced study, capstone |
 
 
+## Practice, projects, and mastery
+
+- [Runnable labs](../labs/README.md) — 12 local exercises, from Python and gradient descent through attention, retrieval, and monitoring.
+- [Project ladder](../projects/README.md) — six staged projects with acceptance criteria and a [shared grading rubric](../projects/RUBRIC.md).
+- [Mastery checks](../assessments/MASTERY_CHECKS.md) and [100-point scorecard](../assessments/MASTERY_SCORECARD.md) — answer explanations and evidence-based gates.
+
 ## Expanded notes and vocabulary
 
 The chapter pages link to long-form, beginner-oriented explanations in [Expanded deep-study notes](DEEP_GUIDES.md). Each subject folder has its own guide with topic explanations, definitions, worked examples, Q&A, and practice. Use the cross-course [AI glossary](GLOSSARY.md) when you meet an unfamiliar term.
