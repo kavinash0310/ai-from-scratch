@@ -38,3 +38,21 @@ Add one entry when you finish a study session or milestone.
 |  |  |  |  |
 
 Use the [project template](templates/project-template.md) when starting a project.
+
+## Full course chapters
+
+Use the [full course index](course/README.md) for detailed notes and Q&A. Check off a chapter when you can explain the ideas and finish its practice.
+
+- [ ] Part 0 — Foundations and study method
+- [ ] Part 1 — Computing, Python, SQL, and algorithms
+- [ ] Part 2 — Mathematics for AI
+- [ ] Part 3 — Data and classical AI
+- [ ] Part 4 — Machine learning
+- [ ] Part 5 — Evaluation and model selection
+- [ ] Part 6 — Deep learning and computer vision
+- [ ] Part 7 — NLP and language models
+- [ ] Part 8 — Transformers and LLMs
+- [ ] Part 9 — Generative AI systems
+- [ ] Part 10 — Other AI fields
+- [ ] Part 11 — Production and responsible AI
+- [ ] Part 12 — Advanced study and capstone

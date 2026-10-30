@@ -32,6 +32,10 @@ The full path takes about **7–9 months at 6–8 focused hours a week**. Treat 
 | 7. Generative AI | Transformers, embeddings, retrieval, and model evaluation | A document question-answering app |
 | 8. Ship responsibly | Interfaces, deployment, monitoring, privacy, and limitations | A documented capstone |
 
+## Full course
+
+The [subject-by-subject course](course/README.md) now organizes 62 chapters from computing and Python through math, classical AI, machine learning, NLP, LLMs, specializations, deployment, and research. It includes detailed notes, diagrams, examples, review questions, and exercises.
+
 ## Detailed course lessons
 
 The lesson library teaches each stage from the ground up with detailed notes, examples, review questions and answers, practice tasks, and mastery checks. Start at the [course index](lessons/README.md); use the [roadmap](ROADMAP.md) for pacing and project milestones.

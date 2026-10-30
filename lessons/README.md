@@ -1,4 +1,8 @@
-# Course lessons
+# Course lesson notes
+
+> For the complete subject-by-subject course with 62 chapters, diagrams, deeper explanations, Q&A, and exercises, start at the [full course index](../course/README.md).
+
+
 
 Welcome. This course is written for a learner starting with no programming or AI background. Go in order the first time. Each lesson has plain-language explanations, detailed notes, examples, questions with answers, and practice.
 
