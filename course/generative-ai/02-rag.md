@@ -25,6 +25,16 @@ Measure retrieval recall: did useful evidence appear among the retrieved passage
 
 A citation should point to the exact source supporting a claim. Test unanswerable and outdated questions and provide an abstention path. Retrieved documents are untrusted input: prompt injection can be embedded inside them.
 
+## Deeper walkthrough: tune chunking systematically
+
+Start with a retrieval baseline using document titles and paragraph chunks. Create a small set of questions with known evidence. Measure recall at k: how often does at least one required passage appear among the top k retrieved chunks?
+
+Then vary chunk size and overlap while keeping the query set fixed. Small chunks may improve precision but omit definitions from nearby paragraphs. Large chunks may include the answer but add distracting text and consume context.
+
+Store source, date, section, and permission metadata. Filter out expired or unauthorized documents before ranking. Try hybrid keyword and vector search when exact terms, IDs, or names matter. Use reranking only if validation shows a gain worth its added latency.
+
+Only after retrieval works should you tune answer prompts and citation behavior.
+
 ## Questions and answers
 
 **Does RAG eliminate hallucination?**  

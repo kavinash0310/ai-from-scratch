@@ -14,6 +14,16 @@ If an application needs JSON-like output, define fields, types, required values,
 
 Write an evaluation set first. Change one prompt element at a time and compare results across normal, ambiguous, adversarial, and out-of-scope examples. A prompt that helps one example may damage another.
 
+## Deeper walkthrough: design a prompt contract
+
+A reliable extraction prompt can define: task, trusted context, untrusted input boundaries, required fields, permitted labels, uncertainty behavior, and output schema. The application should then parse the output and reject invalid values.
+
+For example, extracting an invoice total should return amount, currency, source span, and a confidence or missing marker. Check that the amount is numeric, currency is allowed, and the quoted source span exists in the input. The model should not invent a missing total.
+
+Keep instruction and user-provided document visually and structurally separate. Test a document containing “ignore previous instructions” and verify it is treated as content. Security enforcement belongs in application logic, not prompt wording.
+
+A prompt version should be paired with an evaluation set and recorded model configuration.
+
 ## Questions and answers
 
 **Does prompt engineering change model weights?**  

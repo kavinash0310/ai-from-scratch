@@ -14,6 +14,16 @@ Audio can be represented as a waveform or time-frequency features. Speech recogn
 
 Video adds temporal continuity. A system may generate each frame plausibly while objects flicker or change identity over time. Multimodal models combine text, images, audio, or video representations, but each modality has its own preprocessing and evaluation.
 
+## Deeper walkthrough: diffusion sampling
+
+During training, a clean image x₀ is gradually mixed with noise at a chosen timestep t. The model receives the noisy sample and timestep, then learns to predict the noise or another parameterization of the reverse process. At generation, begin with random noise and apply repeated denoising steps conditioned on text.
+
+Fewer sampling steps can reduce time but may reduce fidelity; guidance strength changes prompt adherence and diversity. These are tradeoffs to evaluate, not universal settings.
+
+Image evaluation should look at prompt alignment, artifacts, diversity, and harms such as stereotyped depictions. Audio additionally needs intelligibility and speaker/consent checks; video needs temporal consistency. Human reviewers need a rubric because “looks good” is not reproducible.
+
+Generated media should be clearly disclosed where users could mistake it for authentic evidence.
+
 ## Questions and answers
 
 **Does diffusion simply remove noise?**  

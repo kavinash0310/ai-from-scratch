@@ -24,6 +24,16 @@ A small, well-evaluated model can show more expertise than an untested app wrapp
 
 After fundamentals, go deep in one area such as computer vision, NLP, LLM systems, recommendation, robotics, forecasting, reinforcement learning, causal ML, or AI infrastructure. Learn its mathematical tools, read core papers, and build a portfolio of increasingly independent work.
 
+## Deeper walkthrough: from idea to evidence
+
+Write a hypothesis such as: “Adding a time-of-day feature reduces next-day delivery MAE on future weeks compared with the current baseline.” Specify the cutoff dates, metric, baseline, and number of repeated runs before training.
+
+If the result improves, inspect whether the feature is truly available when a prediction is made and whether the improvement holds on later weeks. If it fails, inspect data quality, split design, and error groups before rejecting the idea.
+
+Keep experiment records in a table: run ID, code commit, data version, settings, seed, metric, runtime, and notes. Use a README so another person can reproduce the result. Include the failures you observed; they explain the model's boundaries.
+
+The capstone is complete when its evidence is inspectable and the next useful experiment is clear.
+
 ## Questions and answers
 
 **Why report multiple random seeds?**  

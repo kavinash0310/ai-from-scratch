@@ -14,6 +14,14 @@ An LLM evaluation set should include normal, ambiguous, adversarial, and out-of-
 
 Human evaluation requires a rubric, blind comparisons where practical, multiple examples, and attention to disagreement. An automatic judge is another model with its own failure modes; calibrate it against people and known examples.
 
+## Deeper walkthrough: choose an adaptation method
+
+Use prompting when instructions and a few examples reliably shape one task. Use retrieval when answers need changing documents, citations, or private approved knowledge. Use fine-tuning when you need repeated behavior, format, or style that prompts do not reliably produce. Consider a smaller distilled model when latency or cost dominates.
+
+Build the same evaluation set for each candidate. Include quality, latency, cost, privacy, and operational updates. A method that scores slightly higher but cannot meet privacy or latency requirements is not suitable.
+
+For fine-tuning, split by source and time where appropriate; near-duplicate training examples can make evaluation optimistic. Keep a held-out set untouched by prompt and hyperparameter iteration.
+
 ## Questions and answers
 
 **When should I fine-tune instead of prompt?**  

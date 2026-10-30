@@ -16,6 +16,16 @@ Generation overlap metrics may reward shared words without recognizing correctne
 
 Text often contains names, health details, addresses, or private conversations. Minimize collection, document permission and retention, and avoid exposing sensitive text in notebooks or logs. Published data may still carry license restrictions or social risks.
 
+## Deeper walkthrough: disagreement is task information
+
+Suppose annotators mark a message as “urgent.” One may mean safety-critical, another may mean “needs a reply today.” Before training, define the label with examples and borderline cases. Measure agreement and review disagreements.
+
+If reasonable annotators continue to disagree, the target may be subjective. The product may need multiple labels, calibrated confidence, or a human decision rather than forcing one ground-truth category.
+
+Create a time-based test set if language and policy change. Remove duplicates across splits. Evaluate false negatives and false positives separately, and inspect language varieties the product claims to support.
+
+Text may contain sensitive content even in public forums. Data provenance, consent, and retention should be part of the dataset card.
+
 ## Questions and answers
 
 **Why can an NLP model fail on a new dialect?**  

@@ -6,6 +6,16 @@ Graph neural networks update a node representation by aggregating information fr
 
 Evaluation must prevent target or future edges from leaking into training. Removing node features may not remove sensitive relationship information.
 
+## Deeper walkthrough: predict a missing link
+
+Imagine four researchers represented as nodes and collaboration links as edges. The task is to estimate whether two people will collaborate next year. For a node u, a simple baseline might count shared neighbors with v. A graph model instead learns node vectors by combining information from neighbors.
+
+To evaluate fairly, split by time: train on earlier edges and test on later edges. If future edges are used to construct neighborhoods, the test leaks its answer. Decide whether new people may appear at test time: a transductive setup knows the nodes, while an inductive setup must generalize to unseen nodes.
+
+Graph structure itself can reveal private facts. Removing names does not remove relationship information. Choose access, retention, and aggregation rules before collecting a graph.
+
+A useful first experiment compares shared-neighbor ranking, node-feature-only prediction, and a small graph model. If the graph model does not improve a realistic metric, extra complexity may not be justified.
+
 ## Questions and answers
 
 **What is message passing?**  

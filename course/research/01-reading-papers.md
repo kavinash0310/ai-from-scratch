@@ -22,6 +22,16 @@ For each paper, write:
 
 Try to reproduce a small part before accepting the conclusion. Note missing details, software versions, data processing, random seeds, and hardware. A reproduction that differs is not automatically a failure: investigate sources of variation.
 
+## Deeper walkthrough: test a paper's claim
+
+If a paper claims a new image method improves accuracy, check what was held constant: dataset split, input resolution, augmentation, compute, model size, and tuning budget. A comparison is not fair if the new method received extensive tuning while the baseline used default settings.
+
+Separate the paper's abstract claim from the evidence. Does the experiment support all claimed settings or one benchmark? Are results averaged across runs? Is there an ablation showing which component mattered? Does the paper report failures or only best cases?
+
+Search for later work that challenges or reproduces the result. Read code only after understanding the method; code can clarify missing details but may differ from the paper.
+
+A good paper note ends with one question you can test, not just a list of terminology.
+
 ## Questions and answers
 
 **Should I read every equation first?**  

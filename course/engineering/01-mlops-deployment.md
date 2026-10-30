@@ -16,6 +16,16 @@ Automate repeatable steps, but review data and model changes. A model registry o
 
 Release to a small audience or shadow mode first when possible. Compare model outputs with existing decisions. Define a rollback owner and trigger before release. Preserve the previous working version.
 
+## Deeper walkthrough: safe model release
+
+Suppose a new fraud model is ready. First run it in shadow mode on incoming examples without changing decisions. Compare its predictions with the current system and review disagreements. Then release to a small traffic slice with a rollback trigger.
+
+A release package should identify model version, data and feature versions, dependency versions, evaluation report, and owner. The service should validate input schema, handle timeouts, and provide a safe fallback if inference fails.
+
+Measure percentile latency, not only average latency: a small fraction of very slow requests can still harm users. Also track cost per request and throughput under expected peak load. The deployment target may require a smaller or quantized model.
+
+A rollback should restore a known-good version without rebuilding from memory. Practice that procedure before a severe incident.
+
 ## Questions and answers
 
 **What does MLOps add to model training?**  

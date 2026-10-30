@@ -20,6 +20,14 @@ A pretrained model begins with representations learned on another dataset. Freez
 
 Check domain match, model license, expected input preprocessing, and whether pretrained data may encode bias. Compare with a baseline and evaluate on a split that reflects future use.
 
+## Deeper walkthrough: freeze or fine-tune
+
+Start with a pretrained image model as a frozen feature extractor: compute representations and train a small classifier head. This is fast and helps reveal whether the representation separates the task. If validation performance plateaus and the new images differ from pretraining, unfreeze some layers and fine-tune with a smaller learning rate.
+
+Compare both approaches on the same train/validation split. Watch for overfitting when the labeled dataset is small. Fine-tuning can adapt representations, but also erase useful features or learn dataset shortcuts.
+
+A frozen model still carries its training data and limitations. Check license, intended use, and evaluation coverage. Never treat pretraining as a substitute for inspecting errors on your own domain.
+
 ## Questions and answers
 
 **What is overfitting?**  

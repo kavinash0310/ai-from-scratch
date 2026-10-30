@@ -20,6 +20,16 @@ PCA projects data into directions of high variance. It helps visualize or compre
 
 Check whether clusters are stable across seeds or samples, whether they correspond to useful distinctions, and how they compare with simple rules. For anomaly systems, examine false alarms and missed incidents with domain experts.
 
+## Deeper walkthrough: validate a clustering result
+
+Suppose a retailer asks to group customers. Standardize numeric inputs, choose a small k, and inspect cluster sizes and representative examples. If one cluster contains nearly everyone and several contain single points, check scale, outliers, initialization, and k.
+
+Repeat clustering across random seeds or bootstrap samples. If assignments change dramatically, the groups are unstable. Compare with a simple business segmentation and ask whether each group supports a different action.
+
+Do not name clusters “loyal customers” or “price sensitive” based only on their averages. Those interpretations need validation and may reflect confounding factors. A cluster is an algorithmic partition, not a discovered human type.
+
+For anomaly detection, review alerts with domain experts and estimate false-alarm costs before using them operationally.
+
 ## Questions and answers
 
 **How do I know the right number of clusters?**  

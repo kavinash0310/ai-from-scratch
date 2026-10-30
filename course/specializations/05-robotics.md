@@ -6,6 +6,16 @@ A loop is: observe → estimate state → plan → act → observe again. Simula
 
 Use staged testing: offline simulation, controlled lab, limited environment, then broader deployment only with safety boundaries and a stop mechanism.
 
+## Deeper walkthrough: noisy position sensing
+
+Imagine a wheeled robot that estimates its position from wheel rotation. Small wheel slip accumulates, so its estimated position drifts. A camera landmark can correct the estimate but arrives intermittently and may be noisy.
+
+The robot combines a motion model with sensor observations to estimate state, then plans a route and sends motor commands. A controller must account for how quickly the robot can turn and stop. A planner that assumes instant movement may select a path the hardware cannot follow.
+
+Test first in simulation, then in a controlled physical space with a low speed limit, emergency stop, and obstacles. Compare predicted state with measured ground truth. Domain randomization can vary simulated friction and sensor noise, but it cannot guarantee reality is covered.
+
+An AI controller should fail safe when localization confidence is too low. That means stopping, asking for assistance, or selecting a conservative action rather than continuing blindly.
+
 ## Questions and answers
 
 **Why is robotics harder than image classification?**  

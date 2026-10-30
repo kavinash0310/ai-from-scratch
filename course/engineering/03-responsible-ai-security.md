@@ -16,6 +16,16 @@ Threat-model data poisoning, prompt injection, unauthorized tool use, model inve
 
 Human review only helps when reviewers have time, training, authority, and evidence. Define escalation and appeal paths. Communicate limitations in terms users can act on.
 
+## Deeper walkthrough: risk analysis for an AI support assistant
+
+Map who interacts with the assistant, what documents it can read, and which tools it can call. A prompt injection in a retrieved page could ask it to reveal private instructions or send customer data elsewhere. The system should treat retrieved text as untrusted, limit tools to read-only when possible, and enforce access in code.
+
+For privacy, identify personal information in prompts and logs. Remove what is unnecessary, set a deletion schedule, and restrict log access. For fairness, test quality across languages and user groups the product claims to support.
+
+Governance needs owners: who approves a model update, handles a complaint, investigates an incident, and can disable the system? A risk register should have likelihood, impact, mitigation, evidence, and residual risk.
+
+Risk review is continuous because data, users, model versions, and external threats change.
+
 ## Questions and answers
 
 **Does fairness have one universal metric?**  

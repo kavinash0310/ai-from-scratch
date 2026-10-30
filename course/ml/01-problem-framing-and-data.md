@@ -18,6 +18,16 @@ Check distributions and examples before modeling. Plot target balance, missingne
 
 A baseline is a simple comparison: majority class, historical average, current business rule, or previous system. Decide a success metric before tuning. A model is valuable only if it improves the decision enough to justify operational costs and errors.
 
+## Deeper walkthrough: define the prediction moment
+
+For a loan application model, the prediction moment might be immediately after application submission. Candidate features must exist then. A field indicating whether the borrower later repaid is the target or a future outcome, not a valid input.
+
+The row unit could be one application, but one person may submit several applications. Split by person if the intended test is new people. If deployed to future applicants, also consider time-based validation because economic conditions change.
+
+A data dictionary should state definitions and permissible use. A label such as “default” needs a time horizon and rule for late payments. Without those details, two teams can build different targets while using the same column name.
+
+Frame the decision and error costs with domain experts before choosing an algorithm.
+
 ## Questions and answers
 
 **What is a feature?**  

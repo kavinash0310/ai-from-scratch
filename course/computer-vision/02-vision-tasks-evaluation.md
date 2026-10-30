@@ -22,6 +22,14 @@ Classification may need per-class precision and recall; detection uses overlap a
 
 A model that recognizes a background shortcut may score well while failing on new environments. Test controlled variations and locations relevant to deployment.
 
+## Deeper walkthrough: evaluate object detection
+
+A detector predicts boxes and class scores. Evaluation matches predicted boxes with reference boxes using intersection over union (IoU), the overlap area divided by union area. A prediction may count as a true positive only if its class and overlap exceed defined criteria.
+
+Precision-recall curves vary the confidence threshold. Mean average precision summarizes performance across classes and thresholds, but class frequency and annotation quality still matter. Inspect false positives, missed objects, duplicate boxes, and small or occluded objects.
+
+For deployment, test frame rate and memory as well as accuracy. A detector that is accurate but too slow for the camera stream may be unusable. Check for dataset-source leakage and test environmental conditions absent from training.
+
 ## Questions and answers
 
 **Why can image-level train/test splitting be misleading?**  

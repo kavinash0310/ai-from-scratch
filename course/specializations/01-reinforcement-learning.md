@@ -12,6 +12,18 @@ Exploration gathers information about unknown actions; exploitation uses known h
 
 If the reward is incomplete, the agent may exploit it in an unintended way. For example, rewarding “time on site” might encourage addictive behavior rather than user benefit. Include constraints and evaluation beyond reward.
 
+## Deeper walkthrough: a grid-world value update
+
+Let an agent move through a small grid to a goal. Each state is a cell; actions are up, down, left, and right. A wall blocks movement. Reaching the goal gives +10, each step costs −1, and falling into a pit costs −10.
+
+Q-learning updates an action-value estimate toward reward plus discounted future value:
+
+Q(s,a) ← Q(s,a) + α[r + γ maxₐ′ Q(s′,a′) − Q(s,a)]
+
+α is learning rate, γ discounts future rewards, and s′ is the next state. Exploration may use an ε-greedy policy: usually choose the best-known action, but sometimes sample another.
+
+If the agent learns to loop near a reward because the episode never ends, the environment or reward is poorly designed. Add a step limit and inspect trajectories. Reward numbers are design choices, not moral values.
+
 ## Questions and answers
 
 **What does a policy do?**  

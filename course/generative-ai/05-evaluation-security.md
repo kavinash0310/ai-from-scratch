@@ -12,6 +12,16 @@ User messages, web pages, and retrieved documents are untrusted. Instructions em
 
 Minimize logs, redact sensitive information, set retention periods, and control access. Model outputs may reproduce sensitive training data or harmful associations; test plausible abuse and apply appropriate limits.
 
+## Deeper walkthrough: score a document assistant
+
+Create a small gold set with questions, relevant passages, acceptable answers, and cases that cannot be answered. For each question, measure whether retrieval included the needed passage, whether the generated claims are supported, and whether the citation points to the right section.
+
+Include adversarial cases: a document asks the model to ignore its rules; a question requests another user's private record; a query contains unsupported assumptions. The expected behavior may be refusal, permission check, or explicit uncertainty.
+
+Run the same suite after changing prompt, model, chunking, or embedding model. Track regressions by category rather than averaging them away. A single unsafe permission failure may matter more than many low-risk wording improvements.
+
+Keep evaluation documents synthetic or approved; do not copy private user records into a public test suite.
+
 ## Questions and answers
 
 **What is prompt injection?**  

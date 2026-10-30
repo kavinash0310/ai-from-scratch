@@ -23,6 +23,14 @@ Stochastic gradient descent uses noisy mini-batch gradients. Momentum smooths up
 
 Track training and validation loss. If training loss falls while validation loss rises, the model may overfit. If neither falls, inspect learning rate, data scaling, labels, loss, and gradient flow.
 
+## Deeper walkthrough: a one-parameter gradient step
+
+Let prediction be wx for a single example with x=2 and target y=6. Mean squared error is L=(wx−6)². At w=1, the prediction is 2 and loss is 16. The derivative with respect to w is 2(wx−6)x, which is −16 at w=1.
+
+With learning rate 0.1, update w to 1 − 0.1×(−16) = 2.6. The new prediction is 5.2 and loss is 0.64. This simple example shows why subtracting a negative gradient increases the weight and reduces error.
+
+For neural networks, backpropagation applies the same chain rule through many layers. Real training averages gradients over batches and updates millions of parameters.
+
 ## Questions and answers
 
 **What changes during inference?**  

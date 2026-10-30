@@ -21,6 +21,14 @@ This loop adds flexibility and failure paths. A model can misread instructions, 
 
 If the sequence is known, ordinary code is easier to test and secure. Use an agent when dynamic choice across tools adds clear value. Do not label a multi-step script an agent merely for marketing.
 
+## Deeper walkthrough: a safe booking assistant
+
+Imagine a travel assistant that can search flights and book one. Search is read-only; booking changes external state. Give the model a search tool first. The booking tool should require a validated itinerary, passenger confirmation, final price, and explicit user approval.
+
+The model may propose an action, but the application checks that the user is authorized, the itinerary still exists, and the price matches the confirmation. If any field changed, ask the user again. Keep an idempotency key so retries do not create duplicate bookings.
+
+Add a maximum number of tool calls and a clear stop condition. Record tool requests and outcomes without logging unnecessary sensitive details. This design turns a vague “agent” into a permissioned workflow that can be audited.
+
 ## Questions and answers
 
 **Why shouldn't a model execute arbitrary code?**  

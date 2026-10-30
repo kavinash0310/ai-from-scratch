@@ -8,6 +8,16 @@ Clicks are selective observations: users can only click items they saw. The exis
 
 Evaluate offline with careful historical splits, but also consider diversity, satisfaction, user outcomes, and exploration. Online experiments need ethical design and guardrails.
 
+## Deeper walkthrough: two-stage recommendations
+
+Suppose a music catalog has ten million tracks. A candidate generator might select a few hundred using user history, new releases, and similar artists. A ranking model orders candidates using context such as listening time and skips. The interface may reserve space for diverse or editorial items.
+
+A logged impression is the item actually shown; a click is only observed for shown items. If the ranking system never shows a track, its click probability is unknown. This is exposure bias. Offline evaluation should account for the logging policy or be treated as approximate.
+
+For a new user, there is no interaction history. Use onboarding preferences, contextual popularity, or content features. For new tracks, content metadata and exploration can help. Track satisfaction, repeat use, diversity, and complaint signals alongside click-through rate.
+
+Do not equate engagement with welfare. If a metric rewards endless time in the app, the product may optimize the wrong outcome.
+
 ## Questions and answers
 
 **Why isn't a click a simple preference label?**  

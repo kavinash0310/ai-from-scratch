@@ -18,6 +18,14 @@ CNNs use local convolutional operations. Vision transformers split images into p
 
 Architecture choice depends on data, latency, resolution, available pretrained models, and deployment hardware. Use small inputs and models while learning.
 
+## Deeper walkthrough: a simple edge filter
+
+Consider a 3×3 grayscale image patch. A filter with negative values on the left and positive values on the right produces a strong response where intensity changes horizontally. Sliding that filter across the image creates a feature map.
+
+The output height depends on image height, padding, kernel size, and stride. With no padding and stride one, a 5×5 input and 3×3 kernel produce a 3×3 output. Padding preserves more border positions; stride two downsamples.
+
+A CNN learns filters from data rather than relying only on hand-designed edge filters. Early layers may resemble simple patterns, but later responses are distributed and not guaranteed to align with human concepts.
+
 ## Questions and answers
 
 **Why do CNNs share weights?**  
