@@ -16,7 +16,7 @@ Learn the foundations, build projects at every stage, and finish with an AI proj
 
 This repository is your step-by-step learning workspace. It is designed for a complete beginner: no programming experience, advanced math, paid course, or powerful computer is required to begin.
 
-The full path takes about **6–9 months at 6–8 focused hours a week**. Treat the timeline as a guide, not a deadline. It is normal to spend longer on a stage.
+The full path takes about **7–9 months at 6–8 focused hours a week**. Treat the timeline as a guide, not a deadline. It is normal to spend longer on a stage.
 
 ## The learning path
 
