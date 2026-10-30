@@ -22,6 +22,8 @@ A guided sequence from zero coding experience to building, evaluating, and shari
 
 ## Stage 0 — Get ready
 
+**Detailed lesson:** [A map of AI](lessons/00-ai-map.md).
+
 ### Learn
 - What AI, machine learning, deep learning, and generative AI mean.
 - How to use a code editor or browser notebook.
@@ -41,6 +43,8 @@ You can run a small Python program, find its output, and save your work.
 ---
 
 ## Stage 1 — Python foundations
+
+**Detailed lesson:** [Python from zero](lessons/01-python-from-zero.md).
 
 **Suggested time:** 4–5 weeks
 
@@ -66,6 +70,8 @@ Build one small program from a blank file, use functions to organize it, handle 
 
 ## Stage 2 — Math and data
 
+**Detailed lesson:** [Math for AI](lessons/02-math-for-ai.md).
+
 **Suggested time:** 3–4 weeks. Keep practicing these ideas throughout the roadmap.
 
 ### Learn
@@ -88,6 +94,8 @@ You can describe a dataset, calculate a simple summary, read a chart, and explai
 
 ## Stage 3 — AI foundations
 
+**Detailed lesson:** [Classical AI: search and reasoning](lessons/04-classical-ai-search-and-reasoning.md).
+
 **Suggested time:** 2–3 weeks
 
 ### Learn
@@ -108,6 +116,8 @@ You can explain how your program represents a problem, why it chooses a path or 
 ---
 
 ## Stage 4 — Machine learning
+
+**Detailed lessons:** [Machine-learning foundations](lessons/05-machine-learning-foundations.md) and [evaluation and generalization](lessons/06-evaluation-and-generalization.md).
 
 **Suggested time:** 5–6 weeks
 
@@ -131,6 +141,8 @@ Your project keeps test data out of training and preprocessing, compares against
 ---
 
 ## Stage 5 — Deep learning
+
+**Detailed lesson:** [Neural networks and deep learning](lessons/07-neural-networks-and-deep-learning.md).
 
 **Suggested time:** 5–6 weeks
 
@@ -156,6 +168,8 @@ You can describe what the model receives, what it predicts, how its loss changes
 
 ## Stage 6 — Choose a specialty
 
+**Detailed lesson:** [AI specializations](lessons/08-ai-specializations.md).
+
 **Suggested time:** 3–5 weeks
 
 Choose one area for a first focused project. You can explore others later.
@@ -174,6 +188,8 @@ You can explain why the chosen model fits the data, compare it with a simple bas
 ---
 
 ## Stage 7 — Generative AI and large language models
+
+**Detailed lessons:** [Transformers and LLMs](lessons/09-transformers-and-llms.md) and [generative AI applications](lessons/10-generative-ai-applications.md).
 
 **Suggested time:** 4–5 weeks
 
@@ -196,6 +212,8 @@ You can identify what came from the language model and what came from retrieved 
 ---
 
 ## Stage 8 — Ship a capstone responsibly
+
+**Detailed lessons:** [Advanced topics and research](lessons/11-advanced-topics-and-research.md) and [production and responsible AI](lessons/12-production-and-responsible-ai.md).
 
 **Suggested time:** 3–4 weeks
 
