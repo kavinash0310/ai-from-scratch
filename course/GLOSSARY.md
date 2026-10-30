@@ -2,6 +2,8 @@
 
 This glossary defines the recurring vocabulary used across the course in beginner-friendly language. A word can have a more specialized meaning in a particular paper or library; the chapter linked beside it gives the context used here.
 
+For a model-by-model guide to where common approaches are useful and how to compare their efficiency, see the [AI/ML Field Reference](AI-ML-FIELD-REFERENCE.md).
+
 ## Learning and software foundations
 
 - **Algorithm:** a finite, ordered procedure for solving a problem.

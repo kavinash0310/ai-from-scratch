@@ -20,6 +20,10 @@ Read chapters in sequence and open the matching subject notes when you want the 
 | AI engineering and responsible deployment | [Deep notes](engineering/DEEP_NOTES.md) |
 | Research and capstone | [Deep notes](research/DEEP_NOTES.md) |
 
+## Cross-course reference
+
+For a consolidated model-family comparison and core AI/ML terminology, see the [AI/ML Field Reference](AI-ML-FIELD-REFERENCE.md).
+
 ## How to study a topic deeply
 
 1. Read the chapter once to see the topic's place in the path.

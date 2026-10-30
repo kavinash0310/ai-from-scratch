@@ -44,6 +44,10 @@ flowchart TD
 
 The chapter pages link to long-form, beginner-oriented explanations in [Expanded deep-study notes](DEEP_GUIDES.md). Each subject folder has its own guide with topic explanations, definitions, worked examples, Q&A, and practice. Use the cross-course [AI glossary](GLOSSARY.md) when you meet an unfamiliar term.
 
+## AI/ML field reference
+
+Use the [AI/ML Field Reference](AI-ML-FIELD-REFERENCE.md) for a cross-course glossary, a practical guide to major model families, their strongest use cases, and the tradeoffs behind data, training, inference, memory, and engineering efficiency.
+
 ## Which programming languages?
 
 Start with **Python**. Learn **SQL** for databases and basic shell commands for running projects. Add JavaScript/TypeScript if you want a web interface. C/C++ are optional for performance, embedded AI, or robotics. Do not try to learn all languages at once.
