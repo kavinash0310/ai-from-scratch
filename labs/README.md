@@ -35,6 +35,11 @@ Read the script docstring first. If an import fails, install the named dependenc
 | [15 — Graph message passing](specializations/15_graph_message_passing.py) | Graph learning | Aggregate neighboring node features |
 | [16 — Q-learning](specializations/16_q_learning_grid.py) | Reinforcement learning | Learn a policy from state/action/reward interaction |
 | [17 — Kalman filter](specializations/17_kalman_filter.py) | Robotics | Combine a prior estimate with noisy sensor readings |
+| [18 — SQL basics](python/18_sql_basics.py) | Data | Tables, joins, aggregation, parameterized queries |
+| [19 — Model-family comparison](ml/19_model_family_comparison.py) | ML | Compare linear, distance, tree, and ensemble models |
+| [20 — Bigram language model](llm/20_bigram_language_model.py) | NLP/LLMs | Estimate and sample next-word probabilities |
+| [21 — Reproducible experiment](research/21_reproducible_experiment.py) | Research | Save configuration, versions, split, and metrics |
+| [22 — Subgroup metrics](engineering/22_subgroup_metrics.py) | Responsible AI | Inspect synthetic error rates across groups |
 
 ## How to study a lab
 

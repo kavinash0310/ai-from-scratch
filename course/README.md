@@ -42,7 +42,7 @@ flowchart TD
 
 ## Practice, projects, and mastery
 
-- [Runnable labs](../labs/README.md) — 12 local exercises, from Python and gradient descent through attention, retrieval, and monitoring.
+- [Runnable labs](../labs/README.md) — 22 local exercises, from Python and gradient descent through attention, retrieval, and monitoring.
 - [Project ladder](../projects/README.md) — six staged projects with acceptance criteria and a [shared grading rubric](../projects/RUBRIC.md).
 - [Mastery checks](../assessments/MASTERY_CHECKS.md) and [100-point scorecard](../assessments/MASTERY_SCORECARD.md) — answer explanations and evidence-based gates.
 
