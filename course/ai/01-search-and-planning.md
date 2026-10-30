@@ -1,5 +1,7 @@
 # Chapter 1 — Search and planning
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Represent the problem
 
 Search is useful when you can describe possible states and actions. A problem definition contains:

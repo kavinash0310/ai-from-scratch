@@ -1,5 +1,7 @@
 # Chapter 2 — Retrieval-augmented generation (RAG)
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Why retrieve
 
 A language model may not contain current, private, or verifiable knowledge. RAG searches an approved document collection and provides relevant passages at inference. The original RAG research combines parametric model memory with an external vector index; see [Lewis et al.](https://arxiv.org/abs/2005.11401).

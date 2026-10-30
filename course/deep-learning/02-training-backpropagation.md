@@ -1,5 +1,7 @@
 # Chapter 2 — Training, loss, and backpropagation
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## One training step
 
 Training repeats a loop:

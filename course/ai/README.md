@@ -9,3 +9,7 @@ This folder covers systems that search, plan, represent knowledge, reason with r
 3. [Uncertainty and game decisions](03-uncertainty-and-games.md)
 
 Prerequisite: Python basics and data structures. Then continue to [machine learning](../ml/README.md).
+
+## Expanded lesson notes
+
+Read the [full beginner notes](DEEP_NOTES.md) for step-by-step explanations, key terms, worked examples, Q&A, and practice that expand the chapters in this folder.

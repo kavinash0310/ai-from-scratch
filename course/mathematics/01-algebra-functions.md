@@ -1,5 +1,7 @@
 # Chapter 1 — Algebra, functions, and logarithms
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Why algebra appears in AI
 
 A model calculates outputs from inputs using functions. Parameters control the shape of those functions. Training searches for parameter values that make predictions fit examples.

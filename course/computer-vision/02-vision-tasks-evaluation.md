@@ -1,5 +1,7 @@
 # Chapter 2 — Vision tasks, transfer, and evaluation
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Match labels to the task
 
 - Classification assigns one or more labels to an image.

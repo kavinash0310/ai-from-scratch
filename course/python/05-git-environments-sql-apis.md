@@ -1,5 +1,7 @@
 # Chapter 5 — Git, environments, SQL, and APIs
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Git records changes
 
 A repository is a project with version history. A commit records a snapshot and a message. A branch is a movable line of work. GitHub hosts repositories and adds collaboration, issue tracking, and code review.

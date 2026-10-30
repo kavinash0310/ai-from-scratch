@@ -1,5 +1,7 @@
 # Chapter 1 — Neural networks: neurons, layers, and representations
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## The artificial neuron
 
 A neuron receives numeric inputs x, multiplies them by weights w, adds a bias b, and applies an activation:

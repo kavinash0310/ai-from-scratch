@@ -1,5 +1,7 @@
 # Chapter 1 — Reading research papers
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Read in passes
 
 Start with title and abstract: what question is being answered and what claim is made? Read the introduction for motivation and contribution. Then inspect method, assumptions, data, baselines, metrics, ablations, and limitations.

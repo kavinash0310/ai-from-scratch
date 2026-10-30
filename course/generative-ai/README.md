@@ -11,3 +11,7 @@ This folder teaches how to build reliable applications around generative models.
 5. [Evaluation and security](05-evaluation-security.md)
 
 Prerequisite: [LLMs](../llm/README.md).
+
+## Expanded lesson notes
+
+Read the [full beginner notes](DEEP_NOTES.md) for step-by-step explanations, key terms, worked examples, Q&A, and practice that expand the chapters in this folder.

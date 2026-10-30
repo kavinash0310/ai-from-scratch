@@ -1,5 +1,7 @@
 # Chapter 1 — MLOps and deployment
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## A model is one component
 
 A deployed ML service includes input validation, preprocessing, model inference, output handling, access control, logging, and user communication. Batch inference computes results periodically; online inference responds to requests; edge inference runs on a device.

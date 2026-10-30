@@ -1,5 +1,7 @@
 # Chapter 1 — Images, convolution, and computer vision networks
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## An image is a tensor
 
 A grayscale image is a grid of intensity values. A color image commonly has height, width, and channel dimensions. A dataset adds a batch dimension. Pixel values may be normalized, but transformations must be learned or applied consistently.

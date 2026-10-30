@@ -1,5 +1,7 @@
 # Chapter 3 — Responsible AI, security, and privacy
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Map impact through the lifecycle
 
 Ask who uses the system, who is affected, who benefits, who bears errors, and who can contest a decision. Validity, reliability, safety, security, privacy, transparency, and fairness are ongoing concerns.

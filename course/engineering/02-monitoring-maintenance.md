@@ -1,5 +1,7 @@
 # Chapter 2 — Monitoring and model maintenance
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 Monitor software health: errors, latency, throughput, and spend. Monitor data: missing fields, ranges, and input distribution. Monitor model quality: delayed labels, error rates, confidence, and overrides.
 
 Data drift means input distribution changes. Concept drift means the relationship between inputs and outcomes changes. A shift alert is not proof of failure; investigate examples and outcomes before retraining.

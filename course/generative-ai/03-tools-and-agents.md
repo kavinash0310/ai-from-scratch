@@ -1,5 +1,7 @@
 # Chapter 3 — Tools, function calling, and agents
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## A tool call is a software contract
 
 A model may request a search, calculator, or database operation. The host application validates the requested tool and arguments, executes it under permissions, and returns a result. The model proposes; the application decides what is allowed.

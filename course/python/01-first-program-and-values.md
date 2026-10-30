@@ -1,5 +1,7 @@
 # Chapter 1 — Your first Python program, values, and types
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## What a program is
 
 A computer follows precise instructions. Python code is text that the Python interpreter reads and executes. A program can receive input, calculate something, and produce output.

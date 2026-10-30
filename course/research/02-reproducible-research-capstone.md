@@ -1,5 +1,7 @@
 # Chapter 2 — Reproducible experiments and capstone
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Design experiments
 
 State one hypothesis before changing a model. Use a fixed evaluation protocol. Change one major factor when possible. Run multiple seeds if randomness affects results. Report mean and spread instead of only the best run.

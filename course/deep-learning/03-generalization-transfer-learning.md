@@ -1,5 +1,7 @@
 # Chapter 3 — Generalization, regularization, and transfer learning
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Generalization
 
 A network can memorize examples, especially when capacity is high relative to data. Generalization is performance on new examples from the target environment. Train and validation curves help diagnose but do not prove future robustness.

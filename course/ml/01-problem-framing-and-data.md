@@ -1,5 +1,7 @@
 # Chapter 1 — Problem framing and data
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Frame a decision
 
 “Use AI to improve support” is not a trainable task. Define who needs help, what decision is changing, what information exists at decision time, and what errors cost.

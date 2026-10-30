@@ -8,3 +8,7 @@ Computer vision turns images and video into predictions or generated content. Le
 2. [Vision tasks, transfer, and evaluation](02-vision-tasks-evaluation.md)
 
 Prerequisite: [deep learning](../deep-learning/README.md).
+
+## Expanded lesson notes
+
+Read the [full beginner notes](DEEP_NOTES.md) for step-by-step explanations, key terms, worked examples, Q&A, and practice that expand the chapters in this folder.

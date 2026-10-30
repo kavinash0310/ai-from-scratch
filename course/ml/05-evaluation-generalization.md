@@ -1,5 +1,7 @@
 # Chapter 5 — Evaluation and generalization
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Separate fitting from judging
 
 Training data fit parameters. Validation data help choose models. Test data provide a final estimate once choices are fixed. Repeatedly tuning against test results turns the test into training-by-feedback.

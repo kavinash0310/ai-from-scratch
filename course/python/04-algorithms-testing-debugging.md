@@ -1,5 +1,7 @@
 # Chapter 4 — Algorithms, testing, and debugging
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Think in steps before syntax
 
 An algorithm is a finite method for transforming input into output. Write down its steps before choosing Python syntax. For a search task, define what counts as a match, how duplicates behave, and what to return when nothing is found.

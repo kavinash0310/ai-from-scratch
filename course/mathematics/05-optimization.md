@@ -1,5 +1,7 @@
 # Chapter 5 — Optimization and numerical thinking
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Minimize an objective
 
 Optimization chooses parameter values to minimize or maximize an objective. In ML, the objective is often average loss over training examples plus regularization.

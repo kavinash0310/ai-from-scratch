@@ -1,5 +1,7 @@
 # Chapter 4 — Unsupervised learning
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Learn without a target
 
 Unsupervised learning seeks structure when no known label y is provided. The goal may be grouping, compression, anomaly scoring, or exploration. Since there is no answer key, validation requires domain judgment, stability tests, and downstream usefulness.

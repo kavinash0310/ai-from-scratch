@@ -39,6 +39,11 @@ flowchart TD
 | [AI engineering and responsibility](./engineering/README.md) | MLOps, deployment, monitoring, security, privacy, governance |
 | [Research and capstone](./research/README.md) | Paper reading, reproducible experiments, advanced study, capstone |
 
+
+## Expanded notes and vocabulary
+
+The chapter pages link to long-form, beginner-oriented explanations in [Expanded deep-study notes](DEEP_GUIDES.md). Each subject folder has its own guide with topic explanations, definitions, worked examples, Q&A, and practice. Use the cross-course [AI glossary](GLOSSARY.md) when you meet an unfamiliar term.
+
 ## Which programming languages?
 
 Start with **Python**. Learn **SQL** for databases and basic shell commands for running projects. Add JavaScript/TypeScript if you want a web interface. C/C++ are optional for performance, embedded AI, or robotics. Do not try to learn all languages at once.

@@ -1,5 +1,7 @@
 # Chapter 4 — Graph learning
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 A graph contains nodes and edges. Nodes might represent people, chemicals, or locations; edges represent relationships. Graphs may be directed, weighted, temporal, or have multiple node and edge types.
 
 Graph neural networks update a node representation by aggregating information from its neighbors. Repeating this process lets a node incorporate multi-hop structure. Too many layers can oversmooth representations or spread irrelevant information.

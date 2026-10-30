@@ -1,5 +1,7 @@
 # Chapter 1 — Reinforcement learning
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Agent, environment, and reward
 
 An agent observes a state, takes an action, receives a reward, and moves to a new state. The agent seeks a policy that maximizes cumulative reward. A Markov decision process describes states, actions, transitions, rewards, and discount factor γ.

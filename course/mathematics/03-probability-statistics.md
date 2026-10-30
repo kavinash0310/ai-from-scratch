@@ -1,5 +1,7 @@
 # Chapter 3 — Probability and statistics
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Describe data before modeling
 
 Statistics summarizes observations and helps estimate properties of a larger population. The mean is sensitive to outliers; the median is more robust. Variance and standard deviation describe spread; quantiles describe cut points. Histograms and scatter plots reveal shapes and relationships.

@@ -15,3 +15,7 @@ Learn math alongside code. You do not need to master every proof before beginnin
 Review algebra first. Learn vectors and statistics before classical ML; study derivatives and optimization as you meet gradient descent and neural networks. Return for deeper proofs during advanced study.
 
 Next: [Data and classical AI](../ai/README.md).
+
+## Expanded lesson notes
+
+Read the [full beginner notes](DEEP_NOTES.md) for step-by-step explanations, key terms, worked examples, Q&A, and practice that expand the chapters in this folder.

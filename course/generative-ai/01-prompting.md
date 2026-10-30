@@ -1,5 +1,7 @@
 # Chapter 1 — Prompting and structured outputs
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Give the model a clear task
 
 A prompt provides context to a generative model. Useful prompts define task, relevant inputs, constraints, audience, and output format. Examples can clarify edge cases. Ask the model to separate evidence from assumptions and identify missing information.

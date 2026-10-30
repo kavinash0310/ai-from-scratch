@@ -1,5 +1,7 @@
 # Chapter 2 — Tokenization, pretraining, and inference
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Tokenization
 
 A tokenizer maps text to a sequence of token IDs. Tokens can be whole words, subwords, punctuation, or bytes. Token count is not word count. Rare words or multilingual text may split into many pieces.

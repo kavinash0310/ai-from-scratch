@@ -1,5 +1,7 @@
 # Chapter 4 — Image, audio, and video generation
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Diffusion intuition
 
 A diffusion model gradually adds noise to training examples and learns to reverse that corruption. During generation, it starts from noise and applies repeated denoising steps conditioned on text or another signal. The [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239) paper is a foundational formulation.

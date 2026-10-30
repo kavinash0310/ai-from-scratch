@@ -1,5 +1,7 @@
 # Chapter 3 — Fine-tuning, adapters, and LLM evaluation
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Adaptation methods
 
 Prompting supplies instructions and examples at inference. Supervised fine-tuning updates model weights using input-output examples. Preference training shapes behavior using comparisons or feedback. Distillation trains a smaller model to imitate outputs from a larger one.

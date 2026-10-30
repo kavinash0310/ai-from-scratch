@@ -1,5 +1,7 @@
 # Chapter 3 — Time-series forecasting
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 Time-series observations are ordered in time and may contain trend, seasonality, cycles, and sudden shifts. Define the forecast horizon and the information cutoff: what will be known when the prediction is made?
 
 Start with baselines such as last value, moving average, or seasonal repeat. Evaluate with chronological splits or rolling-origin evaluation. Random splitting can place future observations in training and produce an unrealistic score.

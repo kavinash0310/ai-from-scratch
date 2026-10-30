@@ -1,5 +1,7 @@
 # Chapter 2 — Vectors, matrices, and geometry
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Represent many numbers together
 
 A scalar is one number. A vector is an ordered list of numbers. A matrix is a grid. A tensor generalizes arrays to multiple dimensions.

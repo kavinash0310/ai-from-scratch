@@ -1,5 +1,7 @@
 # Chapter 1 — What is artificial intelligence?
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Start with a task
 
 Artificial intelligence is a broad field about building systems that perform tasks associated with intelligent behavior: perceiving, searching, planning, learning, communicating, or acting. AI is not one algorithm, and a system does not need to be conscious to be useful.

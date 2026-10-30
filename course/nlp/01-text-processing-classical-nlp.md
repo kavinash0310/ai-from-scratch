@@ -1,5 +1,7 @@
 # Chapter 1 — Text processing and classical NLP
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Language is structured, but ambiguous
 
 A text file is a sequence of characters; an NLP model needs numerical input. Preprocessing may normalize case, punctuation, whitespace, or Unicode, but every transformation can remove useful signals. For example, lowercasing helps combine “AI” and “ai” but loses capitalization cues for names.

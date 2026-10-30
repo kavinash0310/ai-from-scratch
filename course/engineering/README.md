@@ -9,3 +9,7 @@ A model becomes a product only when its data, code, interface, permissions, moni
 3. [Responsible AI, security, and privacy](03-responsible-ai-security.md)
 
 Prerequisite: at least one evaluated ML or GenAI project.
+
+## Expanded lesson notes
+
+Read the [full beginner notes](DEEP_NOTES.md) for step-by-step explanations, key terms, worked examples, Q&A, and practice that expand the chapters in this folder.

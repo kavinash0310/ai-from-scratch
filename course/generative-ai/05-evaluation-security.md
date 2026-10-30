@@ -1,5 +1,7 @@
 # Chapter 5 — Generative system evaluation and security
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Build a fixed test set
 
 A generative app needs examples of ordinary, ambiguous, unanswerable, malformed, adversarial, and high-risk inputs. Define expected behavior, not only expected text. Measure correctness, grounding, format validity, refusal, tool success, latency, and cost separately.

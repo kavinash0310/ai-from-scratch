@@ -1,5 +1,7 @@
 # Chapter 4 — Calculus, derivatives, and gradients
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## A derivative measures local change
 
 For a function f(x), the derivative f'(x) describes how much the output changes for a small change in x near a point. For f(x)=x², the derivative is 2x; at x=3, a tiny increase in x changes the output by roughly six times that increase.

@@ -12,3 +12,7 @@ Start here if AI, machine learning, or programming is new to you. The goal is to
 You can explain the difference between AI, machine learning, deep learning, NLP, and generative AI; describe a small task in terms of inputs and outputs; and set a weekly practice habit.
 
 Next: [Python](../python/README.md).
+
+## Expanded lesson notes
+
+Read the [full beginner notes](DEEP_NOTES.md) for step-by-step explanations, key terms, worked examples, Q&A, and practice that expand the chapters in this folder.

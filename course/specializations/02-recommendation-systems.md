@@ -1,5 +1,7 @@
 # Chapter 2 — Recommendation and ranking
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 A recommender selects or ranks items for a person or context. Candidate generation finds a manageable set from a large catalog; ranking orders those candidates; the interface controls what is actually shown.
 
 Collaborative filtering uses user-item interaction patterns. Content-based methods use item attributes. Hybrid systems combine both. New users and items create a cold-start problem. Popularity bias can cause already popular items to receive more exposure and feedback.

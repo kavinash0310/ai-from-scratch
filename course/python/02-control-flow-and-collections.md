@@ -1,5 +1,7 @@
 # Chapter 2 — Conditions, loops, and collections
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Make a program choose
 
 A conditional lets a program choose actions based on a Boolean condition. Use if for the first case, elif for additional cases, and else for the remaining case.

@@ -1,5 +1,7 @@
 # Chapter 3 — NLP tasks, evaluation, and data
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Define language labels carefully
 
 Text labels are judgments. “Toxic,” “helpful,” or “urgent” need written criteria and examples. Different annotators may disagree. Record disagreement and determine whether the task should allow multiple labels or uncertainty.

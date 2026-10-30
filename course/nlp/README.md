@@ -9,3 +9,7 @@ NLP covers systems that process human language. This folder builds from text rep
 3. [Language tasks and NLP evaluation](03-tasks-evaluation-data.md)
 
 Next: [LLMs](../llm/README.md).
+
+## Expanded lesson notes
+
+Read the [full beginner notes](DEEP_NOTES.md) for step-by-step explanations, key terms, worked examples, Q&A, and practice that expand the chapters in this folder.

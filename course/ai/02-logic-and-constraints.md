@@ -1,5 +1,7 @@
 # Chapter 2 — Logic, knowledge, and constraints
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Represent facts explicitly
 
 Propositional logic represents statements that are true or false. AND, OR, and NOT combine statements. An implication such as “if it rains, the ground is wet” represents a rule. Inference applies rules to known facts to derive conclusions.

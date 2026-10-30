@@ -1,5 +1,7 @@
 # Chapter 2 — Embeddings and sequence models
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## From sparse counts to dense vectors
 
 An embedding maps an item to a dense numeric vector. Word embeddings can learn from co-occurrence patterns: words appearing in similar contexts may have nearby vectors. Static embeddings assign one vector per word, so polysemous terms share a representation.

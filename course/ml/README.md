@@ -11,3 +11,7 @@ This folder teaches how to frame a learning task, prepare examples, train common
 5. [Evaluation and generalization](05-evaluation-generalization.md)
 
 Use [mathematics](../mathematics/README.md) alongside these chapters. Deep learning comes after the ML workflow, not before it.
+
+## Expanded lesson notes
+
+Read the [full beginner notes](DEEP_NOTES.md) for step-by-step explanations, key terms, worked examples, Q&A, and practice that expand the chapters in this folder.

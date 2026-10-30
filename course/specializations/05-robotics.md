@@ -1,5 +1,7 @@
 # Chapter 5 — Robotics and embodied AI
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 Robotics connects perception, state estimation, planning, and control to physical actions. Sensors are noisy and delayed. The world can move between observation and action. A safe robot must account for dynamics, actuator limits, collisions, and failures.
 
 A loop is: observe → estimate state → plan → act → observe again. Simulators support safer experiments, but simulator-to-real differences can cause failure. Calibration, latency, hardware variation, and environmental changes all matter.

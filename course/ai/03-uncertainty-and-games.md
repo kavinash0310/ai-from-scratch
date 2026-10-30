@@ -1,5 +1,7 @@
 # Chapter 3 — Uncertainty, Bayesian reasoning, and games
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Reason under uncertainty
 
 A rule may say “if evidence A, conclude B.” Real evidence is rarely perfect. Probability represents uncertainty under a model. Bayes' rule updates belief when evidence arrives:

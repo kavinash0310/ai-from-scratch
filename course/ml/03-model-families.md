@@ -1,5 +1,7 @@
 # Chapter 3 — Trees, ensembles, and other model families
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Decision trees
 
 A decision tree asks a sequence of feature questions, splitting examples into regions. A shallow tree can be inspected as rules. A deep tree can memorize training data. Maximum depth, minimum leaf size, and pruning constrain complexity.

@@ -19,3 +19,7 @@ Python is the main language for this path. Learn it before adding more languages
 - **C/C++:** optional performance, robotics, and embedded work.
 
 Complete this folder before the [math](../mathematics/README.md) and [AI](../ai/README.md) projects. You do not need to memorize every Python feature; become comfortable reading documentation and debugging.
+
+## Expanded lesson notes
+
+Read the [full beginner notes](DEEP_NOTES.md) for step-by-step explanations, key terms, worked examples, Q&A, and practice that expand the chapters in this folder.

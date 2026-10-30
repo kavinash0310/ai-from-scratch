@@ -1,5 +1,7 @@
 # Chapter 2 — How to learn AI without getting lost
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## Learn by building a mental model
 
 AI has many new words. Memorizing names without being able to use them creates the feeling of progress without reliable skill. For every concept, answer five questions:

@@ -1,5 +1,7 @@
 # Chapter 2 — Supervised learning: regression and classification
 
+> **Expanded lesson notes:** Open the [full subject notes](DEEP_NOTES.md) for step-by-step explanations, key vocabulary, worked examples, Q&A, and practice.
+
 ## The basic setup
 
 Supervised learning uses examples with known targets. A model f(x; θ) maps features x to a prediction. Training adjusts parameters θ to minimize a loss on training examples. The real goal is performance on new examples from the intended use environment.
