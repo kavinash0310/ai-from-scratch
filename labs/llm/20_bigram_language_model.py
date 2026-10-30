@@ -51,7 +51,7 @@ rng = random.Random(2)
 generated = []
 previous = start
 for _ in range(12):
-    candidates = list(vocabulary)
+    candidates = sorted(vocabulary)
     probabilities = [next_word_distribution(previous)[word] for word in candidates]
     following = rng.choices(candidates, weights=probabilities, k=1)[0]
     if following == end:
