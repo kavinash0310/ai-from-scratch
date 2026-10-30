@@ -30,6 +30,11 @@ Read the script docstring first. If an import fails, install the named dependenc
 | [10 — Attention](llm/10_attention.py) | LLMs | Calculate scaled attention and a causal mask |
 | [11 — Retrieval evaluation](generative-ai/11_retrieval_evaluation.py) | GenAI | Rank evidence and calculate Recall@k and reciprocal rank |
 | [12 — Drift monitoring](engineering/12_drift_monitoring.py) | Engineering | Compare data summaries; interpret drift as a signal |
+| [13 — Time-series baseline](specializations/13_time_series.py) | Forecasting | Chronological holdout and seasonal-naive evaluation |
+| [14 — Matrix factorization](specializations/14_matrix_factorization.py) | Recommendation | Fit user/item factors on observed ratings |
+| [15 — Graph message passing](specializations/15_graph_message_passing.py) | Graph learning | Aggregate neighboring node features |
+| [16 — Q-learning](specializations/16_q_learning_grid.py) | Reinforcement learning | Learn a policy from state/action/reward interaction |
+| [17 — Kalman filter](specializations/17_kalman_filter.py) | Robotics | Combine a prior estimate with noisy sensor readings |
 
 ## How to study a lab
 
