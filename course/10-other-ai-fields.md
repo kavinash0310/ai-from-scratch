@@ -66,3 +66,15 @@ A node combines information from connected nodes to update its representation. T
 
 **Why is robotics harder than a static prediction task?**  
 The system acts in a changing physical world with sensing uncertainty, latency, safety constraints, and consequences for mistakes.
+
+## Practice
+
+1. Implement a tiny grid-world policy or Q-learning agent in simulation.
+2. Build a seasonal-naive time-series forecast and evaluate it with rolling cutoffs.
+3. Compare popularity recommendations with a content-based recommender.
+4. Draw a graph dataset and identify node, edge, and possible leakage.
+5. Choose one specialty and create a project brief with baseline, metric, data rights, and failure mode.
+
+## Mastery check
+
+You can explain the central data structure or feedback loop in your selected specialty and design an evaluation that matches its real use.

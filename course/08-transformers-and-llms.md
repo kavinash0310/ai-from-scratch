@@ -76,3 +76,15 @@ Pretraining learns broad sequence patterns from a large corpus. Instruction tuni
 
 **When should facts be stored in a retrieval system instead of fine-tuned into weights?**  
 When facts change, need citations, or come from private approved sources. Fine-tuning is more suitable for repeated behavior or style than for maintaining a current reference database.
+
+## Practice
+
+1. Draw the Q, K, and V flow for a sentence and explain each role.
+2. Calculate a tiny two-token attention example using scores and normalized weights.
+3. Explain why causal masking is required for next-token training.
+4. Compare a decoder language model and an encoder model by objective and typical use.
+5. Read the abstract of Attention Is All You Need and summarize the contribution without claiming the model understands like a person.
+
+## Mastery check
+
+You can trace text through tokenization, embeddings, transformer blocks, next-token probabilities, and decoding; explain the training objective; and name a failure that evaluation must catch.

@@ -72,3 +72,15 @@ No. It means predicted probabilities align with observed frequencies over a suit
 
 **Are explanations proof of fairness?**  
 No. They can reveal patterns but do not establish fairness or causality. Combine subgroup evaluation, data review, domain knowledge, and affected-user feedback.
+
+## Practice
+
+1. Use a rare-positive example and calculate accuracy, precision, and recall for an always-negative predictor.
+2. Create a time-based split for forecasting and explain why random splitting would leak.
+3. Put imputation and scaling inside a training pipeline.
+4. Compare two decision thresholds and describe which errors change.
+5. Check performance by one relevant subgroup and write what the sample size permits you to conclude.
+
+## Mastery check
+
+You can defend your split, metric, threshold, and uncertainty statement, identify likely leakage, and explain what evidence would cause you to reject the model.

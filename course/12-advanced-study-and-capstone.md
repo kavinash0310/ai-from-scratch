@@ -87,3 +87,15 @@ A clear problem, baseline, fair evaluation, reproducible work, error analysis, h
 
 **Can I skip the math and let libraries handle it?**  
 Libraries handle calculation, not judgment. Advanced practitioners need enough math to diagnose objectives, assumptions, optimization, uncertainty, and failure.
+
+## Practice
+
+1. Pick a paper from a studied topic and write a one-page paper card.
+2. Reproduce a small central component or experiment with a fixed data split.
+3. Run an ablation or multiple-seed experiment and report mean and spread.
+4. Publish a capstone README with setup, baseline, method, evaluation, errors, limitations, and next experiment.
+5. Ask another person to reproduce one result using your documentation.
+
+## Mastery check
+
+Your project is reproducible enough for another person to inspect, your conclusions match the evidence, and you can name the next experiment that would most change your view.

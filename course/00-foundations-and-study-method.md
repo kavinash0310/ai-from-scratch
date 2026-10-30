@@ -79,3 +79,13 @@ You will understand and implement small algorithms and models. You will use libr
 
 **How do I know when to move on?**  
 When you can pass the mastery check and complete the exercise with only occasional reference help. You do not need perfect recall; you need the ability to reason and find trustworthy documentation.
+
+## Practice
+
+1. Pick a familiar task such as sorting mail. Describe a rule-based approach, a data-driven approach, and the cost of one failure.
+2. Explain the learning ladder using one subject you already know.
+3. Write one concrete AI learning goal for this month and one project small enough to finish.
+
+## Mastery check
+
+You can distinguish AI from ML and generative AI, name the main parts of a learning system, and describe how you will practice and verify learning.

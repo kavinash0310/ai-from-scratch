@@ -67,3 +67,15 @@ No. It reduces randomness in decoding but cannot correct missing knowledge or a 
 
 **How should an app behave when sources do not answer?**  
 It should state the limitation, ask for needed information, or escalate to a human rather than inventing a response.
+
+## Practice
+
+1. Build a small RAG prototype over approved, non-sensitive documents.
+2. Create at least 20 test questions with expected source passages, including unanswerable and ambiguous questions.
+3. Measure retrieval separately from answer correctness.
+4. Add an untrusted document containing malicious instructions and verify the system treats it as data.
+5. For one tool call, validate the schema and permissions in ordinary code; require approval before a consequential side effect.
+
+## Mastery check
+
+You can justify prompting, retrieval, fine-tuning, or tool use for a task; measure the chosen system on fixed examples; and explain how it handles missing evidence and malicious input.

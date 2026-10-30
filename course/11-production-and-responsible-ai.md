@@ -78,3 +78,15 @@ No. Logs should serve a defined purpose, protect sensitive information, follow r
 
 **When should an AI feature be disabled?**  
 When severe failures, harm, compromised controls, or unacceptable performance exceed predefined limits. Assign an owner and define the rollback path before release.
+
+## Practice
+
+1. Draw the service architecture for your capstone from user input to model output.
+2. Define three operational metrics and three model-quality metrics.
+3. Describe what alert should fire if inputs shift or error rate rises.
+4. Threat-model one attack involving private data, prompt injection, or tool access.
+5. Write a rollback and human-review plan for a severe failure.
+
+## Mastery check
+
+You can identify a system owner, versions, monitoring signals, security boundaries, privacy limits, user communication, and a concrete rollback path.

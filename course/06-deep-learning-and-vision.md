@@ -70,3 +70,15 @@ It teaches invariance to transformations that are realistic for the task. An unr
 
 **Why inspect image splits for duplicates?**  
 Near-duplicates let the model appear to generalize when the same source image or video frame is already in training.
+
+## Practice
+
+1. Calculate a single neuron's weighted sum and ReLU output by hand.
+2. Train a small PyTorch model and graph training versus validation loss.
+3. Compare a basic model with transfer learning on the same held-out split.
+4. Inspect image duplicates and photographer overlap before reporting results.
+5. Categorize errors such as blur, lighting, wrong label, or ambiguous class.
+
+## Mastery check
+
+You can explain forward pass, loss, backpropagation, optimizer update, overfitting, and the data path through an image classifier.

@@ -86,3 +86,15 @@ Data often resides in relational databases. SQL lets you filter and aggregate cl
 
 **Should I learn C++ before AI?**  
 No. It is optional for most beginner ML work. Start with Python; learn C++ when your specialization or performance needs justify it.
+
+## Practice
+
+1. Write a temperature converter with a function and input validation.
+2. Given a list of scores, calculate count, average, minimum, and maximum. Test an empty list.
+3. Store students and scores in a dictionary and print students above a chosen threshold.
+4. Write a SQL query that groups shipments by route and counts late deliveries.
+5. Save the program with Git and write a README explaining how to run it.
+
+## Mastery check
+
+You can explain variables, types, loops, functions, collections, errors, and a basic SQL query; write a small program without copying it; and use Git to save a working milestone.

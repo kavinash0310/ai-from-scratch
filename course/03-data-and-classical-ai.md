@@ -55,3 +55,15 @@ It guides search toward promising states while remaining cheap to compute. For o
 
 **Why distinguish association from causation?**  
 Two variables can move together because of a third factor or selection effect. Intervention questions need causal assumptions and designs beyond ordinary prediction.
+
+## Practice
+
+1. Write a data contract for predicting late deliveries: unit, prediction time, candidate features, target, source, baseline, and failure cost.
+2. Draw a small grid and implement BFS. Record the states visited and path length.
+3. Add different movement costs and compare Dijkstra with BFS.
+4. Create a simple scheduling CSP with variables, allowed values, and constraints.
+5. Identify one association that should not be interpreted causally.
+
+## Mastery check
+
+You can define a valid prediction example without leakage, select an appropriate search method, and describe where rules or probabilistic reasoning fit.

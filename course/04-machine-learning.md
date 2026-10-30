@@ -66,3 +66,15 @@ A feature is an input representation; an embedding is a learned dense vector rep
 
 **When should I use an ensemble?**  
 When validation evidence shows it helps enough to justify added compute, complexity, and maintenance. It should still be evaluated on held-out data.
+
+## Practice
+
+1. Select a public tabular dataset and define one supervised task.
+2. Build a mean or majority-class baseline.
+3. Train a linear or logistic model and one tree-based model using the same split.
+4. Compare validation metrics and inspect five individual errors.
+5. Record preprocessing, model settings, and the reason for your selected model.
+
+## Mastery check
+
+You can trace raw examples through preprocessing, training, validation, and test; compare a model with a baseline; and explain what its objective and parameters mean.

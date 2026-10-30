@@ -52,3 +52,7 @@ Use a small model or hosted notebook for learning. Training a modern production-
 3. Change one thing and observe how the result changes.
 4. Save a short note and a link to your code in [PROGRESS.md](PROGRESS.md).
 5. If a lesson is confusing, try a second explanation for that topic; do not restart the entire course.
+
+## Full course
+
+Follow the [subject-by-subject course](course/README.md) and its [research source guide](course/SOURCES.md).

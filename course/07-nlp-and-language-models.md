@@ -58,3 +58,15 @@ Usually not by default. Language, dialect, domain, time, and annotation practice
 
 **Why are automatic generation metrics limited?**  
 They compress language quality into a number and may miss correctness, nuance, or usefulness. Combine automated checks with human review and task-specific tests.
+
+## Practice
+
+1. Build a bag-of-words baseline for a small text classification task.
+2. Inspect how punctuation, rare words, and a multilingual sentence are tokenized.
+3. Compare a static word embedding with contextual representations at a conceptual level.
+4. Write a label guide and identify two examples that annotators could disagree about.
+5. Evaluate per-class precision and recall and inspect error examples.
+
+## Mastery check
+
+You can explain how raw text becomes model input, identify the task-specific label, select an appropriate metric, and describe where language data may be unrepresentative or sensitive.

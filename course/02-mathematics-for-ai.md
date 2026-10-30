@@ -79,3 +79,15 @@ It is the model's assigned probability under its training and calibration condit
 
 **Why does gradient descent subtract the gradient?**  
 The gradient points toward the direction of greatest local increase. Moving in the opposite direction tends to reduce the objective for a small enough step.
+
+## Practice
+
+1. Calculate mean, median, and range for a dataset with one extreme value.
+2. Compute a dot product by hand and describe it as a weighted sum.
+3. For prediction y_hat = wx + b, calculate predictions for three x values.
+4. Draw a simple loss curve and mark a gradient-descent update.
+5. Explain why scaling area measured in square metres and price measured in millions can affect an algorithm.
+
+## Mastery check
+
+You can explain features and parameters, summarize a distribution, interpret a vector and matrix, describe a derivative and gradient, and show how an optimizer uses a learning rate to reduce loss.
