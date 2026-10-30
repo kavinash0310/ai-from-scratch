@@ -41,6 +41,10 @@ Read the script docstring first. If an import fails, install the named dependenc
 | [21 — Reproducible experiment](research/21_reproducible_experiment.py) | Research | Save configuration, versions, split, and metrics |
 | [22 — Subgroup metrics](engineering/22_subgroup_metrics.py) | Responsible AI | Inspect synthetic error rates across groups |
 
+## Expected results
+
+Before asking whether a score is good, compare your run with the [lab guide](LAB_GUIDE.md), then explain why the result has that shape.
+
 ## How to study a lab
 
 1. Read its matching chapter and expanded notes first.
