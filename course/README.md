@@ -56,11 +56,11 @@ Use the [AI/ML Field Reference](AI-ML-FIELD-REFERENCE.md) for a cross-course glo
 
 ## Continue into AI backend engineering
 
-After the AI/ML foundations, follow [AI Backend Engineer](https://github.com/kavinash0310/ai-backend-engineer) for API design, databases, security, model-provider integration, RAG backends, deployment, observability, and production capstones.
+If your backend background is Java/Spring Boot, follow the [Java + Spring AI course](https://github.com/kavinash0310/ai-backend-engineer/tree/main/course/java-spring) and its [roadmap](https://github.com/kavinash0310/ai-backend-engineer/blob/main/ROADMAP.md). It covers production API/security design, Spring AI integration, PostgreSQL and RAG, durable jobs, tests/evaluation, cloud operations, and senior system design. Use this course for AI/ML theory and keep Java for your backend implementation.
 
 ## Which programming languages?
 
-Start with **Python**. Learn **SQL** for databases and basic shell commands for running projects. Add JavaScript/TypeScript if you want a web interface. C/C++ are optional for performance, embedded AI, or robotics. Do not try to learn all languages at once.
+Start with **Python** for AI notebooks and the scientific ecosystem. Learn **SQL** and basic shell commands. If you already build backend services with Java/Spring Boot, keep Java for the service layer and use the linked [AI Backend Engineer Java path](https://github.com/kavinash0310/ai-backend-engineer/tree/main/course/java-spring); Python is still useful for model/data examples. Add JavaScript/TypeScript only if you need a web interface. C/C++ are optional for performance, embedded AI, or robotics. Do not try to learn all languages at once.
 
 ## How to use the course
 

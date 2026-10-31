@@ -32,9 +32,9 @@ The core beginner-to-builder route takes about **7–9 months at 6–8 focused h
 | 7. Generative AI | Transformers, embeddings, retrieval, and model evaluation | A document question-answering app |
 | 8. Ship responsibly | Interfaces, deployment, monitoring, privacy, and limitations | A documented capstone |
 
-## Full course
+## Continue into AI backend engineering
 
-For a backend-focused continuation on APIs, databases, model integration, RAG services, deployment, and operations, see [AI Backend Engineer](https://github.com/kavinash0310/ai-backend-engineer).
+If you already build backend services with Java and Spring Boot, continue with the [Java + Spring AI backend course](https://github.com/kavinash0310/ai-backend-engineer/tree/main/course/java-spring) and its [full roadmap](https://github.com/kavinash0310/ai-backend-engineer/blob/main/ROADMAP.md). That path covers Spring APIs and security, Spring AI, PostgreSQL/RAG, durable jobs, testing, cloud, observability, and senior-level system design. Keep using this repository for model and mathematics theory; you do not need to switch your backend language to Python.
 
 
 The [full course](course/README.md) is organized into 13 subject folders, including [Python](course/python/README.md), [mathematics](course/mathematics/README.md), [AI](course/ai/README.md), [ML](course/ml/README.md), [NLP](course/nlp/README.md), and [LLMs](course/llm/README.md). It contains 46 detailed chapter files and a 62-topic progress tracker.
