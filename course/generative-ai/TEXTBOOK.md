@@ -122,3 +122,21 @@ Multimodal input raises consent and privacy concerns. A recording may capture by
 Practice: design an assistant that extracts invoice fields. Define schema, confidence handling, evidence highlighting, human review, malformed-output validation, and how prompt injection in an invoice note is neutralized by application permissions.
 
 Further reading: [OWASP LLM security](https://owasp.org/www-project-top-10-for-large-language-model-applications/) and [OpenAI evaluation guide](https://platform.openai.com/docs/guides/evals).
+
+## 16. Evaluate RAG at each stage
+
+Create a small, hand-checked dataset containing the question, relevant source passage, expected answer elements, and whether an answer is possible. Measure retrieval recall at k: how often a relevant passage appears in the top k results. Check ranking quality: is the best passage near the top? Then evaluate generation for support, completeness, citation alignment, and abstention.
+
+A citation is correct only if it points to evidence that supports the attached statement. A citation to the right document but wrong section is not sufficient. Break multi-part answers into claims and trace each claim to evidence. Include stale and conflicting documents to test whether the system uses version metadata.
+
+## 17. Failure analysis and product boundaries
+
+For every failed example, identify the earliest stage that failed: parsing, chunking, retrieval, permission filtering, ranking, generation, or display. Fixing the generator will not repair a missing document. Fixing retrieval will not prevent a generated unsupported claim.
+
+A product boundary defines what the assistant is allowed to answer and do. A course assistant may answer from course materials but should say when those materials do not cover a question. A finance or health tool needs domain-specific validation and human escalation. General-purpose model capability does not substitute for task authorization.
+
+## 18. Cost and latency budgets
+
+A system's response time includes retrieval, reranking, model generation, tool execution, and network overhead. Measure median and tail latency, not only average. Caching can reduce cost for repeated safe queries but must respect permissions and freshness. Smaller models may handle routing or extraction while larger models are reserved for difficult cases. Test the full system after each optimization because compression and routing can change quality.
+
+Practice: create 30 evaluation cases for a policy assistant: answerable, unanswerable, conflicting versions, sensitive access, and prompt injection. Define pass criteria before running models and record latency and cost alongside correctness.

@@ -116,3 +116,17 @@ Questions: Is retrieval equivalent to fine-tuning? No; retrieval changes supplie
 Practice: specify how you would evaluate an assistant for internal policy questions. Include answerable and unanswerable cases, source citations, permissions, prompt injection, latency, and human escalation.
 
 Further reading: [Hugging Face LLM course](https://huggingface.co/learn/llm-course/en/chapter1/1) and [Attention Is All You Need](https://arxiv.org/abs/1706.03762).
+
+## 16. Tokenization by a simple example
+
+Imagine the vocabulary contains “play”, “ing”, and “ground” but not “playingground”. A subword tokenizer may split the string into “play”, “ing”, and “ground”. It then maps each piece to an integer ID. The model uses the ID to look up an embedding. Because the tokenizer is fixed, an unusual name may be split into many pieces. This makes the model's context cost depend on the text and tokenizer, not merely its character count.
+
+Tokenization affects multilingual fairness, code handling, prompt length, and exact reproduction. Different model families may use different vocabularies, so token counts and model inputs are not interchangeable. Special tokens can mark message boundaries, tool calls, or end-of-turn and must be interpreted using the model's format.
+
+## 17. Training data, scaling, and limits
+
+Pretraining pipelines collect, filter, deduplicate, and sequence large corpora. Each step can remove useful material or retain unwanted material. Data composition affects factual coverage, language distribution, style, and harmful associations. Large-scale training can improve many capabilities but also increases cost and does not eliminate evaluation gaps.
+
+An apparent capability can come from memorization, pattern generalization, tool access, or a mixture. To distinguish them, test novel examples, paraphrases, counterfactuals, retrieval-disabled cases, and citation correctness. Avoid claiming general reasoning based on a small benchmark.
+
+Practice: compare two LLMs for a policy question task using the same representative cases. Include answerable and unanswerable questions, permissions, citations, injection attempts, cost, and latency. Record model versions because providers can update them.

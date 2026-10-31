@@ -93,3 +93,31 @@ Questions: What does least privilege mean? Grant only necessary permissions. Why
 Practice: write a release review for a ticket triage model, including rollback owner, metric thresholds, slice monitoring, privacy, and appeal.
 
 Further reading: [Google production ML monitoring](https://developers.google.com/machine-learning/crash-course/production-ml-systems/monitoring) and [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework).
+
+## 14. Continuous integration for ML
+
+A CI pipeline can run code style checks, unit tests, data-schema tests on a small fixture, model-loading checks, and evaluation regression tests. It should not require private production data. A candidate model can be compared against a fixed baseline and held-out evaluation. A regression threshold should account for normal variability and should not automatically approve a deployment.
+
+Data tests should validate feature transformations, missing values, category ranges, and output shapes. Integration tests can verify that a request moves through preprocessing, model inference, and response serialization. Security checks should reject unauthorized fields and malformed tool requests. Keep a reproducible artifact so a released version can be rebuilt or retrieved.
+
+## 15. Model-serving architecture
+
+A typical path is client request → authentication and validation → feature transformation → model inference → policy layer → response. Each boundary should have a clear schema and failure mode. A policy layer may apply thresholds, constraints, access checks, or human review. Do not embed authorization only in the model prompt.
+
+For online systems, plan capacity using traffic and model latency. Batching can increase throughput but may delay a request while waiting for a batch. Quantization or smaller models can reduce serving cost but require quality evaluation. Cache only outputs whose freshness and permissions permit reuse. Include model version in internal logs for diagnosis.
+
+## 16. Monitoring, fairness, and feedback loops
+
+Prediction monitoring alone is not outcome monitoring. Confidence may stay stable while actual quality deteriorates. Labels can arrive months later; define a proxy carefully and update it when real outcomes become available. Human overrides may signal problems but are also influenced by workload and policy.
+
+When a recommendation changes exposure, that exposure affects future data. When an eligibility model changes who receives an offer, the labels observed later are selected by prior decisions. This feedback loop means future training data is not a neutral sample. Record interventions and design monitoring to distinguish model behavior from policy behavior.
+
+## 17. Security review for LLM applications
+
+Treat prompts, retrieved documents, and tool outputs as untrusted. Apply least-privilege credentials, enforce authorization outside the model, validate outputs, constrain network access, and prevent secret leakage. Tool execution should be allow-listed and bounded. Store sensitive logs only when necessary and protect them.
+
+Test indirect injection from documents, attempts to reveal hidden prompts, unauthorized tool calls, malicious file contents, and denial-of-service inputs. A refusal on a test prompt does not prove the app is secure; verify the underlying service rejects unauthorized actions.
+
+Questions: Why use CI for models? It catches code and data-contract regressions before release. Why do outcomes arrive late? Many real labels are only observed after the prediction's consequence. Why is model confidence not sufficient monitoring? Calibration and real-world outcomes can change while score distributions look similar.
+
+Practice: draw a serving architecture for an LLM assistant and label trust boundaries, credentials, permission checks, logging, failure modes, and rollback.

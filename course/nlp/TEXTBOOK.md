@@ -101,3 +101,17 @@ Privacy and rights are central because text often contains personal or copyright
 Practice: build a TF-IDF baseline for sentiment, inspect false positives and false negatives, then add bigrams. Explain which examples changed and why. Compare results on a separate test set and include class counts.
 
 Further reading: [NLTK Book](https://www.nltk.org/book/) and [Hugging Face Datasets](https://huggingface.co/docs/datasets/).
+
+## 15. Sequence-to-sequence learning and context
+
+A sequence-to-sequence model reads an input sequence and produces an output sequence. Translation is an example. An encoder can build contextual representations of the source; a decoder generates target tokens while attending to source information. Teacher forcing trains the decoder using correct previous tokens, while inference conditions on tokens it generated itself. This difference can cause exposure bias: small generation errors can change later inputs.
+
+A Transformer replaces recurrent step-by-step processing with attention across positions, which allows parallel training and long-range relationships. Positional information represents order. A causal decoder mask prevents looking at future output tokens. Attention weights are useful computation but should not automatically be presented as faithful human explanations.
+
+## 16. Multilingual and domain language
+
+Tokenizers may split a low-resource language into many small pieces, increasing sequence length and cost. A model trained mostly on one language may have weak vocabulary, factual coverage, or safety behavior in another. Test the actual languages, scripts, code-switching, and dialects that users rely on. Translation from a high-resource language is not a substitute for evaluation with fluent speakers.
+
+Domain jargon and abbreviations may differ from web language. A glossary, domain-adapted corpus, or retrieval system may help, but check data rights and privacy. Distinguish terminology errors from reasoning errors.
+
+Practice: design a multilingual sentiment evaluation set. Specify annotation instructions, language coverage, split policy, false-positive review, and how you would compare a TF-IDF baseline with a contextual model.

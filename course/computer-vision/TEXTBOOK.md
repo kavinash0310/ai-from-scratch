@@ -99,3 +99,19 @@ Suppose only 800 labeled photos are available. A random split can be optimistic 
 Questions: Why can accuracy hide failure on one class? Large classes dominate the count. Why group split? Related images share background and identity cues. Why save preprocessing with model? Different resize or normalization changes inputs.
 
 Further reading: [Torchvision models](https://pytorch.org/vision/stable/models.html) and [COCO evaluation](https://cocodataset.org/#detection-eval).
+
+## 15. Annotation quality and evaluation protocol
+
+A label is a human-defined target. For a bounding-box dataset, annotators must agree on whether the box includes shadows, partially visible objects, or a group of overlapping objects. In segmentation, boundary precision may be important for one task but not another. Write annotation rules and measure disagreement before treating the labels as unquestionable ground truth.
+
+Detection metrics combine classification and localization. A prediction may identify the right class but have a poor box; another may have a good box but wrong class. Average precision summarizes precision-recall behavior under a specified IoU threshold, and COCO-style reporting averages across several thresholds. Two reported AP values are not comparable unless the protocol and data match.
+
+In a real inspection application, a false negative may be more costly than an extra review. Choose confidence thresholds using validation data and the review workflow. Test small, occluded, blurred, and unusual objects. A detector with high aggregate AP can still miss a rare critical defect.
+
+## 16. Responsible image datasets
+
+Before using photos or video, document source, consent or license, intended purpose, retention, and whether bystanders or sensitive environments are captured. Face or medical-image datasets deserve particular care. Limit who can access raw media and avoid putting identifiable samples into public reports. Evaluate demographic and environmental coverage when relevant; a dataset can omit groups even when class counts look balanced.
+
+Practice: for an object-detection task, write an annotation policy for partial occlusion, a group split rule, the IoU evaluation protocol, a threshold selection method, and a human-review fallback.
+
+Further reading: [COCO evaluation](https://cocodataset.org/#detection-eval).

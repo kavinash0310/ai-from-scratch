@@ -91,3 +91,29 @@ For robotics, divide the problem into perception, state estimation, planning, co
 Questions: Why not reward clicks alone? Visibility affects clicks and can harm user value. What is a forecast origin? The time at which the prediction is made using then-available information. What does message passing do? It aggregates information along graph edges.
 
 Practice: select one area and design a baseline experiment, split policy, metric, failure analysis, and safe fallback. State the biggest assumption you are making and how you would test it.
+
+## 12. Compare a simple RL update with supervised learning
+
+A supervised example gives an input and a target label. An RL transition gives a state, chosen action, reward, and next state; the correct action may not be labeled. Q-learning updates an action-value estimate toward reward plus discounted future value. This is a bootstrapping target because it uses the model's own estimate of the future.
+
+An exploration policy balances trying uncertain actions against using current knowledge. Epsilon-greedy chooses a random action with probability epsilon and otherwise selects the best estimated action. It is simple but can take unsafe actions. In offline RL, the learner uses a fixed dataset and should not assume unobserved actions have known outcomes. Evaluating a policy from historical logs requires assumptions about how those logs were collected.
+
+## 13. Recommendation metrics and causal impact
+
+Precision at k measures the fraction of the top k items judged relevant; recall at k measures how much of the relevant set was found. Discounted cumulative gain gives greater weight to relevant items near the top. These are ranking metrics, not user-welfare measures. Add diversity, coverage, freshness, and user-defined outcomes.
+
+A recommendation can change user behavior, so online experiments may be needed to estimate causal impact. Random assignment helps compare alternatives but should include guardrails, adequate duration, and checks for novelty and long-term effects. Avoid optimizing clicks alone if the true aim is learning, satisfaction, or well-being.
+
+## 14. Forecasting workflow in detail
+
+First plot observations and identify trend, seasonal cycles, missing intervals, and outliers. Establish naive and seasonal-naive forecasts. Choose the horizon, then evaluate with rolling origins. Compare errors by horizon and slice such as weekday, region, or demand level. A model may be good for routine periods and fail on holidays.
+
+Prediction intervals can be assessed for coverage: if a nominal 90% interval is well calibrated, approximately 90% of relevant future outcomes should fall within it under comparable conditions. Wide intervals are less useful but may be more honest. Point forecasts and uncertainty bounds serve different decision needs.
+
+## 15. Graph and robotics diagnostics
+
+In a graph project, compare against degree, common-neighbor, or feature-only baselines. Test whether a target label can be inferred from graph construction or user behavior. For temporal graphs, ensure only past edges are used. Neighbor sampling and graph size influence memory and representation.
+
+A robotics test plan should inject sensor dropout, noisy location, network delay, obstacle changes, and actuator saturation. Define safe limits and stop conditions for each test. Simulation tests code logic; hardware tests validate physical assumptions. Record which behaviors are never tested and keep a physical emergency stop.
+
+Practice: choose one specialization and define a realistic held-out test: future time, new user, unseen edge, or physical environment. Explain why it matches deployment and identify a failure that the metric might hide.

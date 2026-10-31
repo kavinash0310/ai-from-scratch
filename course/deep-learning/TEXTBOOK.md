@@ -115,3 +115,17 @@ Parameter count is not the same as capability. Training cost also depends on exa
 Practice: explain the forward pass, loss, backward pass, and parameter update for one labeled image. Predict what happens if labels are randomly shuffled, the learning rate is too high, or validation images are augmented differently from training images.
 
 Further reading: [PyTorch Basics](https://docs.pytorch.org/tutorials/beginner/basics/intro.html).
+
+## 16. A worked classification calculation
+
+Suppose a network outputs logits (2.0, 0.5) for classes cat and dog. Softmax converts scores to probabilities by exponentiating each score and dividing by their sum. The cat probability is about 0.82 and dog about 0.18. If the true label is cat, cross-entropy is the negative logarithm of the probability assigned to cat, about 0.20. If the true label were dog, the penalty would be about 1.70. The training signal is therefore larger when the model confidently assigns little probability to the correct class.
+
+This example explains the objective, not the quality of the dataset. If labels are wrong or classes overlap, the optimizer still pushes probabilities toward the supplied labels. Inspect difficult and disputed examples. A model's confidence should not be interpreted as correctness unless calibration is checked.
+
+## 17. Capacity, regularization, and transfer
+
+A model with more parameters can represent more patterns, but needs data and compute. Generalization depends on architecture, optimization, data, augmentation, and regularization together. Weight decay, dropout, early stopping, and data augmentation have different mechanisms and assumptions. They should be evaluated rather than applied by ritual.
+
+Pretraining transfers representations from a source corpus. It can make learning faster, but source data may contain unwanted associations or a different distribution. Compare frozen features and fine-tuning, use appropriate validation, and inspect target-specific errors. Save the checkpoint identifier and license with the experiment.
+
+Practice: use a tiny labeled dataset and compare a randomly initialized model with a frozen pretrained representation. Keep the split fixed. Report validation metric, training time, and at least three representative errors. Explain whether the gain is worth the extra dependency and compute.
