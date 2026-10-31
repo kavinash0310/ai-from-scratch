@@ -34,6 +34,9 @@ The core beginner-to-builder route takes about **7–9 months at 6–8 focused h
 
 ## Full course
 
+For a backend-focused continuation on APIs, databases, model integration, RAG services, deployment, and operations, see [AI Backend Engineer](https://github.com/kavinash0310/ai-backend-engineer).
+
+
 The [full course](course/README.md) is organized into 13 subject folders, including [Python](course/python/README.md), [mathematics](course/mathematics/README.md), [AI](course/ai/README.md), [ML](course/ml/README.md), [NLP](course/nlp/README.md), and [LLMs](course/llm/README.md). It contains 46 detailed chapter files and a 62-topic progress tracker.
 
 ## Hands-on labs, projects, and mastery checks

@@ -54,6 +54,10 @@ The chapter pages link to long-form, beginner-oriented explanations in [Expanded
 
 Use the [AI/ML Field Reference](AI-ML-FIELD-REFERENCE.md) for a cross-course glossary, a practical guide to major model families, their strongest use cases, and the tradeoffs behind data, training, inference, memory, and engineering efficiency.
 
+## Continue into AI backend engineering
+
+After the AI/ML foundations, follow [AI Backend Engineer](https://github.com/kavinash0310/ai-backend-engineer) for API design, databases, security, model-provider integration, RAG backends, deployment, observability, and production capstones.
+
 ## Which programming languages?
 
 Start with **Python**. Learn **SQL** for databases and basic shell commands for running projects. Add JavaScript/TypeScript if you want a web interface. C/C++ are optional for performance, embedded AI, or robotics. Do not try to learn all languages at once.
