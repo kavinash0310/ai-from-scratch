@@ -39,3 +39,23 @@ Feature selection must happen inside training or cross-validation. Selecting fea
 **Practice:** Generate two overlapping point clouds. Compare k-means with a Gaussian mixture. Inspect hard labels versus soft membership, then test an elongated cluster. Explain what a cluster score cannot prove.
 
 Further reading: [Stanford CS229 schedule](https://cs229.stanford.edu/materials/Handout2.pdf) and [scikit-learn mixture models](https://scikit-learn.org/stable/modules/mixture.html).
+
+## Worked example: Naive Bayes with smoothing
+
+Suppose a tiny spam dataset has 4 spam and 6 ordinary messages, so the class priors are 0.4 and 0.6. The word “prize” occurs in 3 of 4 spam messages and 1 of 6 ordinary messages. With a simple presence feature, the likelihoods are 0.75 and about 0.17. For a message containing “prize,” the unnormalized class scores are 0.4*0.75=0.30 for spam and 0.6*0.17=0.10 for ordinary. Normalizing gives an approximate spam probability of 0.75.
+
+With only six ordinary examples, the estimate is fragile. If a word never appeared in one class, its raw likelihood would be zero; Laplace smoothing adds pseudo-counts so one absent observation does not rule a class out. The numerical probability should still be checked for calibration because the independence assumption and small sample can make confidence misleading.
+
+## EM in words, then in equations
+
+Imagine measurements from two overlapping groups, but group identities are hidden. EM first assigns each point a soft responsibility for each Gaussian based on the current means and variances. It then updates each Gaussian using those weighted points. Repeat until likelihood changes little or a stopping limit is reached.
+
+The expectation step does not discover a single “true” label. A point near two components may receive responsibility 0.55 and 0.45. Initialization, number of components, covariance restrictions, and scaling affect the result. Compare several starts and inspect the fitted distributions, not only a scalar clustering score.
+
+## Generalization checks
+
+A theoretical capacity measure explains why very flexible classes may need more examples; it does not replace measurement. For practical work, compare training and validation curves, use nested validation if selecting many hyperparameters, and preserve the final test set. If samples share people, time, sites, or near-duplicate records, split by that structure.
+
+**Key terms:** empirical risk is measured training loss; population risk is expected loss on the target distribution; capacity describes the range of functions a model class can express; soft assignment gives fractional membership; likelihood measures how well a model assigns probability to observed data.
+
+**Check your understanding:** Why can an EM clustering score improve while cluster meaning remains poor? The score is tied to model fit, while usefulness depends on whether the components support the intended interpretation or decision. Why can a high-capacity model still generalize? With suitable data, regularization, and assumptions, complexity alone does not determine failure.

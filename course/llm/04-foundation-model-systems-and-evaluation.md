@@ -27,3 +27,29 @@ Worked example: For a course tutor, ask held-out questions with supporting passa
 **Practice:** Compare two assistants on the same test cases. Report model version, test design, citations, refusal behavior, injection results, p95 latency, and per-task cost.
 
 Further reading: [Stanford CS324](https://stanford-cs324.github.io/winter2022/) and [NIST Generative AI Profile](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf).
+
+## Data contamination and benchmark interpretation
+
+A benchmark may overlap with pretraining or fine-tuning data. Exact overlap is not the only concern: paraphrases or explanations may have been seen. Contamination can inflate scores without the model being able to generalize as intended. Use newly written or private evaluation examples when a decision depends on them, and vary wording while preserving the task.
+
+A benchmark score also depends on prompting, context, decoding, tool access, answer extraction, and judge model. Keep a reproducible harness and report these details. Automated judges can favor stylistic similarity or share errors with the model being evaluated; audit a sample with independent human reviewers.
+
+## End-to-end assistant evaluation
+
+For a course assistant, separate:
+1. retrieval quality: did the correct passage appear in top k?
+2. answer support: does each claim follow from the retrieved evidence?
+3. citation correctness: does each link support the attached claim?
+4. abstention: does the system say evidence is missing?
+5. behavior: does it resist instructions inside untrusted documents?
+6. operation: are latency, availability, and cost acceptable?
+
+This decomposition turns a vague “quality” failure into an actionable diagnosis. Keep held-out examples, but add new regression cases when real failures occur.
+
+## Model and dataset documentation
+
+Record model identifier, version or revision, tokenizer, context limit, modality, license, source of fine-tuning data, and known evaluation limits. A hosted endpoint may change without local code changing, so capture an evaluation snapshot and date. Do not assume open weights imply open data or unrestricted use.
+
+Practice: prepare 20 questions: five directly answerable, five requiring synthesis across passages, five outside the corpus, and five with malicious retrieved instructions. Set pass criteria for answer support, citation, abstention, tool use, latency, and cost before testing.
+
+Further reading: [Stanford HELM benchmark](https://crfm.stanford.edu/helm/latest/) and [NIST Generative AI Profile](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf).

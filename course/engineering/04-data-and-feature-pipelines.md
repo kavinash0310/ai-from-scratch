@@ -31,3 +31,34 @@ Worked example: At 8 p.m., predict tomorrow's product demand. The seven-day aver
 **Practice:** Define three features for a delivery-time prediction: timestamp, unit, missing behavior, validation, and leakage risk. Draw ingestion → validation → transformation → training → inference.
 
 Further reading: [Google dataset splitting](https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets) and [Google production monitoring](https://developers.google.com/machine-learning/crash-course/production-ml-systems/monitoring).
+
+## Make a data contract testable
+
+A contract should distinguish a hard validity rule from a statistical expectation. “Age must be a nonnegative integer” is a schema rule. “The median age is usually between 30 and 50” is a distribution alert that may need human review. If every unusual distribution automatically blocks a pipeline, legitimate changes can be hidden; if no alert exists, a broken source can silently feed a model.
+
+For a feature, document:
+- source table and owner;
+- event-time and processing-time fields;
+- definition, window, and unit;
+- missing and late-event behavior;
+- allowed range or category;
+- privacy class and retention;
+- transformations and version.
+
+This metadata lets reviewers detect ambiguous terms and future-data leakage.
+
+## A timestamped example
+
+At 8 p.m. on Tuesday, a delivery service predicts Thursday arrival. It may use historical route times known by Tuesday, current weather forecasts issued by Tuesday, and orders received so far. It cannot use Thursday's realized weather or the final delivery time. If the training table stores a corrected address entered after delivery, using it may also leak future information.
+
+Create a small table with prediction timestamp, feature event timestamp, and target horizon. Assert that every feature timestamp is less than or equal to prediction time. Then hand-inspect edge cases such as late-arriving events and backfilled records.
+
+## Batch, stream, and online features
+
+Batch jobs process a bounded historical dataset on a schedule. Streaming systems update features as events arrive and must consider duplicates, ordering, and late data. Online features answer a prediction request with low latency. A feature store can manage offline historical values and online values, but requires access control, versioning, monitoring, and cost justification.
+
+Training-serving parity tests feed identical examples through offline and online code, then compare output within a documented tolerance. Feature version changes should trigger a model compatibility review. A model artifact should reference the feature definitions it expects.
+
+**Key terms:** lineage traces data origin and transformations; point-in-time join retrieves the value available at prediction time; idempotent operation can be safely repeated; schema drift is a changed field or type; training-serving skew is a difference between training and production feature values.
+
+Practice: define a seven-day purchase count feature for next-day demand. Specify timezone, event timestamp, late-event cutoff, duplicate behavior, prediction time, and test that prevents future transactions from entering the feature.

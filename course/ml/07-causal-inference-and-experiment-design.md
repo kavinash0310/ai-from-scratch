@@ -39,3 +39,25 @@ A churn model can predict who may leave. It does not show which discount will re
 **Practice:** Design a reminder experiment. Specify population, randomization unit, primary outcome, window, guardrails, minimum meaningful effect, sample-size plan, and stopping rule. Name a confounder in a non-randomized comparison.
 
 Further reading: [Hernán and Robins, Causal Inference: What If](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/) and [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework).
+
+## Worked example: why observational comparison can reverse
+
+Imagine 100 high-risk and 100 low-risk customers. High-risk customers receive a retention offer more often and still churn more often. Comparing offered versus not offered customers may make the offer look harmful because the groups differed before the offer. Within each risk group, the offer may actually reduce churn. This is confounding and can produce Simpson's paradox, where an aggregate trend reverses after stratifying by a relevant variable.
+
+Randomization balances such factors in expectation, but small samples can remain imbalanced. Analyze according to assigned group (intention-to-treat) to preserve the benefits of randomization. If users can share information or treatment affects other users, the assignment unit may need to be a group rather than an individual.
+
+## Plan before collecting outcomes
+
+Define one primary outcome, an observation window, an assignment unit, and a minimum effect worth detecting. Select guardrails so a gain does not hide harm. A power calculation uses the minimum effect, outcome variance or event rate, false-positive threshold, and desired power to estimate sample size. It is not a guarantee: attrition, dependence, noncompliance, and instrumentation errors can change the result.
+
+When testing many variants, outcomes, or subgroups, some will look positive by chance. Correct for multiple comparisons, use a pre-planned hierarchy, or treat exploratory results as hypotheses for a new study. Do not promote the most favorable subgroup after searching dozens of cuts.
+
+## Read an interval and p-value carefully
+
+Suppose a treatment changes completion rate by an estimated +1 percentage point, with a 95% confidence interval from -0.5 to +2.5 points. The data are compatible with a small harm, no change, or a moderate benefit under the analysis assumptions. This result is not proof of “no effect.” A p-value of 0.04 would not mean there is a 96% chance the treatment works; it describes how surprising the data are under a specified null and model.
+
+Difference-in-differences can compare pre/post changes in treated and comparison groups, but requires parallel untreated trends and no confounding simultaneous policy change. Plot pre-period trends and explain why the assumptions are plausible.
+
+**Key terms:** treatment is the intervention; control is the comparison condition; estimand is the exact causal quantity of interest; intention-to-treat analyzes by assignment; power is a design probability under assumptions; guardrail metric monitors potential harm.
+
+Practice: Write a short preregistration for a study of a tutoring assistant. Include a primary learning outcome, assignment unit, 30-day window, privacy guardrail, minimum useful effect, sample-size rationale, and a rule for handling missing outcomes.
