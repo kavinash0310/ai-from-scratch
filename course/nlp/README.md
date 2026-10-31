@@ -16,4 +16,4 @@ Read the [full beginner notes](DEEP_NOTES.md) for step-by-step explanations, key
 
 ## Textbook volume
 
-Read the [long-form subject textbook](TEXTBOOK.md) for expanded explanations, worked examples, deeper topic coverage, review questions, and practice. Pair it with the lesson sequence and lab exercises.
+Read the [long-form subject textbook](TEXTBOOK.md) for expanded explanations, worked examples, deeper topic coverage, review questions, and practice. Pair it with the lesson sequence and lab exercises.\n\n## Optional advanced chapters\n\nThese lessons extend the core sequence for learners who want deeper theory or production practice.\n\n- [04 information retrieval and speech.md](04-information-retrieval-and-speech.md)\n

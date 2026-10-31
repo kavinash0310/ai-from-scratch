@@ -2,7 +2,7 @@
 
 This course is for a learner starting with little or no AI background. Each subject has its own folder so you can see what belongs to Python, mathematics, AI, ML, NLP, LLMs, and other fields.
 
-There are **13 subject folders and 46 detailed chapter files**, covering the 62 topics in the [progress tracker](../PROGRESS.md). Each chapter is a lesson with explanations, examples, Q&A, practice, and a mastery check. Some technical topics include diagrams.
+There are **13 subject folders, 46 core lessons, and 8 optional advanced chapters**. The beginner-to-builder path covers 62 tracked core topics; the [advanced study path](ADVANCED_PATH.md) adds deeper theory and systems topics. Each chapter is a lesson with explanations, examples, Q&A, practice, and a mastery check. Some technical topics include diagrams.
 
 ## Learning path
 
@@ -50,7 +50,7 @@ flowchart TD
 
 The chapter pages link to long-form, beginner-oriented explanations in [Expanded deep-study notes](DEEP_GUIDES.md). Each subject folder has its own guide with topic explanations, definitions, worked examples, Q&A, and practice. Use the cross-course [AI glossary](GLOSSARY.md) when you meet an unfamiliar term.
 
-## AI/ML field reference
+## Advanced study path\n\nThe core path gives a broad beginner-to-builder foundation. The [optional advanced study path](ADVANCED_PATH.md) fills gaps in learning theory, causal experiments, probabilistic models, data systems, efficient inference, speech/search, foundation-model systems, and robust safety testing.\n\n## AI/ML field reference
 
 Use the [AI/ML Field Reference](AI-ML-FIELD-REFERENCE.md) for a cross-course glossary, a practical guide to major model families, their strongest use cases, and the tradeoffs behind data, training, inference, memory, and engineering efficiency.
 

@@ -31,4 +31,4 @@ This index links the course's long-form subject volumes. The intended reader may
 
 ## Practice and honest expectations
 
-Use the [course roadmap](./README.md), [labs](../labs/LAB_GUIDE.md), [projects](../projects/README.md), and [mastery checks](../assessments/MASTERY_CHECKS.md) together. Reading builds vocabulary and mental models; expertise also requires implementation, debugging, evaluation, feedback, and sustained practice. This course is a structured path, not a guarantee of professional expertise.
+Use the [course roadmap](./README.md), [labs](../labs/LAB_GUIDE.md), [projects](../projects/README.md), and [mastery checks](../assessments/MASTERY_CHECKS.md) together. Reading builds vocabulary and mental models; expertise also requires implementation, debugging, evaluation, feedback, and sustained practice. This course is a structured path, not a guarantee of professional expertise.\n\n## Continue beyond the core volumes\n\nUse the [advanced study path](ADVANCED_PATH.md) for deeper learning theory, causal reasoning, probabilistic models, data systems, efficiency, speech and retrieval, foundation-model systems, and safety testing.\n

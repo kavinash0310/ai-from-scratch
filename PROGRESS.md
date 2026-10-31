@@ -39,7 +39,7 @@ Add one entry when you finish a study session or milestone.
 
 Use the [project template](templates/project-template.md) when starting a project.
 
-## Subject folders and 62-topic tracker
+## Subject folders and 62-topic core tracker
 
 Use the [full course index](course/README.md) for the subject folders and detailed lessons. Mark a topic complete after you can explain it and finish its practice.
 
@@ -158,4 +158,4 @@ Complete a lab by running it, explaining its output, changing one assumption, an
 | Beginner data project | [Project 01](projects/01-data-investigation.md) | [ ] |
 | Tabular ML project | [Project 02](projects/02-tabular-ml.md) | [ ] |
 | Specialty project and capstone | [Project ladder](projects/README.md) | [ ] |
-| Mastery assessment | [Checks](assessments/MASTERY_CHECKS.md) · [scorecard](assessments/MASTERY_SCORECARD.md) | [ ] |
+| Mastery assessment | [Checks](assessments/MASTERY_CHECKS.md) · [scorecard](assessments/MASTERY_SCORECARD.md) | [ ] |\n\n## Optional advanced study\n\nThese modules extend the core and are not beginner prerequisites. Check a box after completing its practice and explaining its assumptions. See the [advanced study path](course/ADVANCED_PATH.md) for order.\n\n- [ ] Learning theory and probabilistic models ([lesson](course/ml/06-learning-theory-and-probabilistic-models.md))\n- [ ] Causal inference and experiment design ([lesson](course/ml/07-causal-inference-and-experiment-design.md))\n- [ ] Generative model families ([lesson](course/deep-learning/04-generative-model-families.md))\n- [ ] Data and feature pipelines ([lesson](course/engineering/04-data-and-feature-pipelines.md))\n- [ ] Efficient training and inference ([lesson](course/engineering/05-efficient-training-and-inference.md))\n- [ ] Information retrieval and speech ([lesson](course/nlp/04-information-retrieval-and-speech.md))\n- [ ] Foundation-model systems and evaluation ([lesson](course/llm/04-foundation-model-systems-and-evaluation.md))\n- [ ] Robustness and AI safety testing ([lesson](course/engineering/06-robustness-and-ai-safety-testing.md))\n

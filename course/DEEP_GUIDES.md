@@ -37,4 +37,4 @@ A learner becomes advanced by repeating this cycle with increasingly realistic d
 
 ## Textbook volumes
 
-The [textbook index](TEXTBOOK.md) links the long-form chapters for all 13 subjects. The subject READMEs and chapter pages link to their matching volume.
+The [textbook index](TEXTBOOK.md) links the long-form chapters for all 13 subjects. The subject READMEs and chapter pages link to their matching volume.\n\n## Advanced topics\n\nThe [advanced study path](ADVANCED_PATH.md) identifies important extensions beyond the beginner-to-builder core, with optional chapters in their subject folders.\n
