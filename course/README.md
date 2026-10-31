@@ -50,7 +50,11 @@ flowchart TD
 
 The chapter pages link to long-form, beginner-oriented explanations in [Expanded deep-study notes](DEEP_GUIDES.md). Each subject folder has its own guide with topic explanations, definitions, worked examples, Q&A, and practice. Use the cross-course [AI glossary](GLOSSARY.md) when you meet an unfamiliar term.
 
-## Advanced study path\n\nThe core path gives a broad beginner-to-builder foundation. The [optional advanced study path](ADVANCED_PATH.md) fills gaps in learning theory, causal experiments, probabilistic models, data systems, efficient inference, speech/search, foundation-model systems, and robust safety testing.\n\n## AI/ML field reference
+## Advanced study path
+
+The core path gives a broad beginner-to-builder foundation. The [optional advanced study path](ADVANCED_PATH.md) fills gaps in learning theory, causal experiments, probabilistic models, data systems, efficient inference, speech/search, foundation-model systems, and robust safety testing.
+
+## AI/ML field reference
 
 Use the [AI/ML Field Reference](AI-ML-FIELD-REFERENCE.md) for a cross-course glossary, a practical guide to major model families, their strongest use cases, and the tradeoffs behind data, training, inference, memory, and engineering efficiency.
 
