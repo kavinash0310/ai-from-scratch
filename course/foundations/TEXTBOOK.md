@@ -139,3 +139,35 @@ Practice: choose an AI feature and draw its boundary. List inputs, outputs, obje
 Questions: Does a plausible answer prove understanding? No; plausibility is an output property, while understanding is a broader claim that needs evidence. Does a benchmark score prove safe deployment? No; deployment adds users, distribution shift, privacy, infrastructure, and consequences. Should beginners start from a model name? Start from the task and baseline, then select a method whose assumptions fit.
 
 Further reading: [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/) and [Stanford Encyclopedia of Philosophy: Artificial Intelligence](https://plato.stanford.edu/entries/artificial-intelligence/).
+
+## 14. A complete problem-framing worksheet
+
+Use this worksheet before selecting a model.
+
+**User and decision:** Who will use the output, and what decision changes because of it? “Predict churn” is incomplete until we know which team acts on the prediction and when.
+
+**Prediction moment:** State the exact moment the system must respond. This determines which inputs are legitimately available. A field created after the outcome is leakage, even if it is highly predictive.
+
+**Target and time horizon:** Define what counts as success and when it is measured. “Customer churn” could mean cancellation within 30 days, no purchase for 90 days, or account closure. These labels are not interchangeable.
+
+**Baseline and metric:** Record how the task is handled today. Select a metric that matches costs and workflow. If humans can review only 20 cases per day, precision among the top 20 may be more useful than accuracy.
+
+**Failure and fallback:** Describe false alarms, missed cases, subgroup harms, privacy risks, and operational outages. Name a fallback such as a rule, manual review, or abstention.
+
+Worked example: a clinic asks to predict appointment no-shows. The prediction time is 24 hours before an appointment. Inputs must exist by then. The label is a missed appointment, but the objective is not necessarily to penalize the patient; the intervention might be a reminder or an offer to reschedule. A historical no-show label may reflect transportation or scheduling barriers. Compare with a simple reminder policy and evaluate whether interventions actually help patients attend, not just whether a classifier ranks risk.
+
+## 15. Evidence, prediction, and explanation
+
+A prediction estimates an outcome under patterns in data. A causal question asks what would happen if an intervention changed. A correlation between reminders and attendance does not prove reminders caused attendance; people receiving reminders may differ from those who do not. Randomized trials or carefully justified causal designs address different questions than ordinary prediction.
+
+An explanation also has levels. A model may expose its internal rule, such as a shallow tree. A post-hoc explainer may approximate how input changes affect outputs. A human-friendly reason is not necessarily the true internal cause. Explain what the tool can and cannot establish, then validate explanations with domain experts.
+
+Questions: Why define the prediction moment? To know which features are available and prevent leakage. Why is the current workflow a baseline? The model should improve on an existing decision process. Why distinguish prediction from causality? A useful predictor may not identify which intervention will change the outcome.
+
+Practice: rewrite “use AI to improve safety” as a bounded question. Specify user, decision, timing, inputs, target, baseline, metric, failure cost, and fallback. List two alternative explanations for any observed association.
+
+## 16. A realistic path from beginner to independent learner
+
+First learn to run small programs, inspect data, and explain a baseline. Then study model assumptions and evaluation. After that, implement neural networks and language or vision models. Finally, build one end-to-end project with data documentation, evaluation, error analysis, deployment plan, and a clear account of limitations. At each stage, teach the concept back without notes. If the explanation depends on memorized labels, return to the example.
+
+The goal of a course is not to memorize every architecture. Tools change. Durable expertise is the ability to ask what data means, what objective is being optimized, whether evidence is valid, how a system fails, and who bears the cost.

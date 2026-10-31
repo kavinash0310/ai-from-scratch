@@ -94,3 +94,31 @@ Measure the complete application: task success, evidence support, citations, ref
 Practice: design a document assistant limited to public policies. Specify source tracking, access checks, retrieval metrics, citation requirements, abstention when evidence is missing, and one injection test.
 
 Further reading: [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) and [Hugging Face course](https://huggingface.co/learn/llm-course/en/chapter1/1).
+
+## 12. Prompt design and structured outputs
+
+A prompt can specify role, task, context, constraints, and output format. Example: “Summarize this passage in three bullet points; use only supplied evidence; if evidence is missing, say so.” This improves clarity but is not a hard security boundary. Validate structured output with a parser and schema; retry or fail safely if invalid. Never assume that JSON-looking text is valid JSON.
+
+Separate instructions from untrusted content and delimit the content being analyzed. The model may still follow hostile instructions inside a quoted document, so enforce permissions in code. A prompt template is part of the application version and should be evaluated like code.
+
+## 13. RAG retrieval decisions
+
+Chunk size controls the granularity of retrieval. Very small chunks lose context; very large chunks dilute relevance and consume more context. Preserve metadata such as source, title, section, version, and access policy. Hybrid search combines lexical matching with semantic vectors. Reranking may improve ordering at added latency.
+
+Define retrieval metrics such as recall at k: whether a relevant passage appears among the first k results. Define answer metrics such as citation correctness and factual support. Build examples for no-answer questions and stale sources. A system should abstain when evidence is missing instead of filling the gap with a confident guess.
+
+## 14. Tools, agents, and control
+
+A tool should have a narrow interface and explicit permission. A read-only query is lower impact than sending an email or changing a record. Validate arguments, impose limits, and log the executed action. For consequential actions, request user confirmation through the product. Build idempotent operations where repeating a call cannot create duplicate effects.
+
+Bound an agent's number of steps, total time, and maximum cost. Define when it must stop or escalate. Use deterministic workflows for known sequences; open-ended agent loops are harder to debug and may repeat actions. Evaluate tool selection, argument validity, completion, and recovery from tool failure separately from answer quality.
+
+## 15. Multimodal systems
+
+A multimodal model may accept text, images, audio, or video. Each modality has its own preprocessing: image resizing and patches, audio sampling and segmentation, video frame selection. A model may miss small visual text, timing, or rare events if preprocessing removes them. Alignment between modalities is important; timestamps and transcription errors can change meaning.
+
+Multimodal input raises consent and privacy concerns. A recording may capture bystanders or sensitive environments. Provide clear controls for capture, storage, and deletion. Test quality across device and environmental conditions.
+
+Practice: design an assistant that extracts invoice fields. Define schema, confidence handling, evidence highlighting, human review, malformed-output validation, and how prompt injection in an invoice note is neutralized by application permissions.
+
+Further reading: [OWASP LLM security](https://owasp.org/www-project-top-10-for-large-language-model-applications/) and [OpenAI evaluation guide](https://platform.openai.com/docs/guides/evals).

@@ -112,3 +112,25 @@ Reasoning traps include assuming a greedy local choice is globally best, treatin
 Practice: give one edge in a maze a high cost. Explain why a least-cost route may use more steps than a shortest-in-steps route. Then construct a constraint problem with three tasks and two time slots and show where backtracking occurs.
 
 Further reading: [Berkeley CS188](https://inst.eecs.berkeley.edu/~cs188/) and [AIMA resources](https://aima.cs.berkeley.edu/).
+
+## 13. State spaces and algorithm selection
+
+A search problem can be defined by an initial state, a set of actions, a transition function, a goal test, and a path-cost function. A route state might be the current intersection; an action is taking a road; transition gives the next intersection; the goal is reaching the destination; path cost could be distance or travel time. Choosing the wrong state representation can make a manageable problem enormous or omit a detail needed for correct decisions.
+
+Breadth-first search is complete on a finite branching space and gives a minimum-step solution when action costs are equal. Uniform-cost search orders by accumulated cost and finds a minimum-cost solution with nonnegative step costs. Depth-first search may find a solution quickly but can get trapped in a deep branch. Greedy best-first search uses only the estimated distance to the goal; it can be fast but is not generally optimal.
+
+A* uses cost so far plus estimated remaining cost. If the heuristic is admissible, it never overestimates. For a grid with four-direction movement and unit cost, Manhattan distance is admissible because at least that many horizontal-plus-vertical steps are required. A* may need substantial memory because it stores a frontier. Algorithm choice considers quality, completeness, cost, and available memory.
+
+## 14. A constraint example
+
+Consider assigning three exams A, B, and C to two time slots. A conflicts with B, and B conflicts with C, but A and C may share a slot. Variables are exams; the domain is {slot1, slot2}; constraints disallow same slot for conflicting exams. Assign A to slot1. B must use slot2. Then C cannot use slot2, so it can use slot1. If the choice for A were arbitrary among many constraints, a most-constrained-first heuristic would expose bottlenecks sooner. Backtracking undoes a choice when no legal value remains.
+
+## 15. Games and adversarial decisions
+
+Minimax assumes two players with opposing objectives. It explores possible moves to a chosen depth and backs up values: the maximizing player chooses the largest child value; the minimizing player chooses the smallest. Alpha-beta pruning skips branches that cannot change the decision. Search depth and an evaluation function matter: if the heuristic misjudges positions, deeper search can still make bad choices.
+
+Not every uncertain decision is adversarial. A weather condition is stochastic, not an opponent. A Markov decision process or expectimax tree may model chance outcomes with probabilities. Choosing the correct model of uncertainty matters more than using a sophisticated search routine.
+
+Questions: What is an admissible heuristic? A remaining-cost estimate no greater than the true cost. What is a constraint domain? The values a variable is allowed to take. Why is minimax not a model of every strategic situation? It assumes a particular adversarial objective and may ignore uncertainty or bounded behavior.
+
+Practice: write the state, legal actions, goal, and cost for a small maze, then compare BFS and uniform-cost search when one corridor is expensive. Explain the assumptions behind each result.

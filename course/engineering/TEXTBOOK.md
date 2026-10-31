@@ -51,3 +51,45 @@ Does deployment finish the project? No; data, users, and software change. Is dri
 Practice: make a launch checklist for a maintenance-request ranking model. Include data tests, time and group splits, error costs, slices, service limits, monitoring, escalation, and rollback.
 
 Further reading: [Google ML monitoring](https://developers.google.com/machine-learning/crash-course/production-ml-systems/monitoring), [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework), and [OWASP LLM security](https://owasp.org/www-project-top-10-for-large-language-model-applications/).
+
+## 9. A model release checklist explained
+
+Before release, answer these questions in writing:
+- What user need does this address, and what is the existing baseline?
+- What input schema and prediction contract does the service guarantee?
+- What data and model versions produced this artifact?
+- Does evaluation simulate deployment and include meaningful slices?
+- What error costs, privacy risks, security threats, and licensing restrictions remain?
+- Who owns the system and receives alerts?
+- Can the service be paused or rolled back?
+- What human process handles uncertainty and appeal?
+
+A checklist does not make every answer good, but it prevents hidden assumptions from becoming permanent production behavior. For a high-impact system, domain and legal review may be needed before any technical release decision.
+
+## 10. Data and model versioning
+
+Version code in Git, data with an immutable identifier or snapshot, and model artifacts with a registry or checksum. Record preprocessing alongside the model because a model without the transformation pipeline is incomplete. Keep evaluation reports linked to the exact artifact. A registry can track candidate, approved, deployed, and retired states.
+
+Do not silently overwrite a model. A versioned release supports rollback and lets investigators reconstruct which output was produced by which model. Preserve only logs needed to diagnose the system, with appropriate access and retention controls.
+
+## 11. Reliability and service-level thinking
+
+A service-level objective might state that 99% of valid requests complete within a latency budget. The objective should reflect user need, not an arbitrary dashboard target. Define timeouts, retries, circuit breakers, and fallback responses. Retrying a non-idempotent tool call can create duplicate actions. Load testing should include realistic input sizes and concurrent traffic.
+
+A model endpoint can be unavailable while a product remains useful if a fallback exists: a rules-based path, cached result, manual queue, or clear error. A stale result should be labeled as stale. Monitor both successful request rate and the quality of the returned result.
+
+## 12. Monitoring and retraining triggers
+
+Monitor input schema violations, shifts in important features, output distribution, human overrides, delayed labels, and outcome metrics. Data drift and concept drift are diagnostic signals. Define thresholds and an owner for investigation. An alert without an action plan creates noise.
+
+Retraining requires fresh representative data and valid labels. New data may encode changed policies or historical harm. Compare the new candidate with the current model on a fixed evaluation, inspect slices, and review downstream behavior. Do not automatically retrain and deploy without validation merely because a schedule fired.
+
+## 13. Responsible-AI review
+
+Identify affected people, potential benefits and harms, who can contest an outcome, and how the system affects access or opportunity. Review performance across relevant slices, privacy, security, transparency, human oversight, and accessibility. A model card describes intended use and limits; a data sheet describes collection and composition. These documents are useful only if maintained as the system changes.
+
+Questions: What does least privilege mean? Grant only necessary permissions. Why use shadow deployment? It tests a candidate on live-like inputs without changing decisions. Why can monitoring an average be insufficient? A subgroup can fail while the overall metric looks stable.
+
+Practice: write a release review for a ticket triage model, including rollback owner, metric thresholds, slice monitoring, privacy, and appeal.
+
+Further reading: [Google production ML monitoring](https://developers.google.com/machine-learning/crash-course/production-ml-systems/monitoring) and [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework).

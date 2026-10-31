@@ -89,3 +89,29 @@ Normalization can improve optimization when feature scales differ. Batch normali
 Questions: What does batch size change? The number of examples used for each gradient estimate, affecting memory and optimization noise. Why can too-high a learning rate fail? Updates can jump past useful parameter regions. Does automatic differentiation verify the model's intended meaning? No, it differentiates the computations written.
 
 Further reading: [PyTorch beginner tutorials](https://docs.pytorch.org/tutorials/beginner/basics/intro.html) and [autograd tutorial](https://docs.pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html).
+
+## 12. Activations, outputs, and loss
+
+A linear layer calculates z=Wx+b. An activation introduces nonlinearity. ReLU returns max(0,z); sigmoid maps a scalar to a range between zero and one; softmax converts a vector of class scores into probabilities that sum to one. A neural network that stacks only linear layers is still a linear transformation, so nonlinear activations give depth more expressive power.
+
+For multiclass classification, the network emits logits, one score per class. Softmax turns logits into a distribution. Cross-entropy penalizes low probability assigned to the correct class. For binary classification, one logit with binary cross-entropy is common. In practice, stable libraries combine these operations to avoid numerical problems; do not apply softmax twice if the loss expects raw logits.
+
+## 13. Convolution, sequences, and architecture choice
+
+A convolution applies a small learned filter across locations in an image. Weight sharing means the same filter can detect a pattern in many positions. Pooling or strided convolution reduces spatial size. CNNs use this structure for images; recurrent networks process sequences with hidden state; Transformers use attention to relate token positions. Architecture encodes an assumption about the data.
+
+A receptive field is the input region that can influence a feature. Small local filters build larger receptive fields over layers. Padding changes boundary behavior and output size. In sequence models, masks prevent attention to future tokens or padding. Choose the architecture to match the data, not because one model is fashionable.
+
+## 14. Transfer learning and fine-tuning
+
+Transfer learning begins with representations learned on a source task and adapts them to a target task. Feature extraction freezes most of the pretrained model and learns a small task head. Fine-tuning updates some or all pretrained weights. It can reduce labeled-data needs but may overfit small target datasets, forget useful representations, or inherit source-data limitations.
+
+Compare a frozen-feature baseline, partial fine-tuning, and full fine-tuning when resources allow. Keep a valid validation split, freeze only what you intend, and save the exact base model revision. A pretrained checkpoint is a dependency with license and provenance constraints.
+
+## 15. Capacity and compute
+
+Parameter count is not the same as capability. Training cost also depends on examples, sequence or image size, batch size, optimizer state, precision, and number of updates. GPU memory limits batch and model size; mixed precision can reduce memory and speed training, but numerical stability and hardware support matter. Monitor utilization and data-loading time so that a GPU is not idle while the CPU prepares examples.
+
+Practice: explain the forward pass, loss, backward pass, and parameter update for one labeled image. Predict what happens if labels are randomly shuffled, the learning rate is too high, or validation images are augmented differently from training images.
+
+Further reading: [PyTorch Basics](https://docs.pytorch.org/tutorials/beginner/basics/intro.html).

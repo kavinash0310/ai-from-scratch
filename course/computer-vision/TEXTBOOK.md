@@ -73,3 +73,29 @@ A model may use shortcuts such as background, watermark, or camera type instead 
 Practice: define how a partially hidden object should be labeled. Explain how your rule changes the training labels and evaluation, then identify one image slice likely to be harder.
 
 Further reading: [COCO evaluation](https://cocodataset.org/#detection-eval) and [PyTorch tutorials](https://pytorch.org/tutorials/).
+
+## 11. Building a vision experiment carefully
+
+Start by inspecting actual images and labels. Check image dimensions, color channels, compression, orientation, duplicate files, class balance, and label quality. A dataset may include multiple crops from the same original image; splitting them independently can leak near-identical examples across train and test. Split by source, person, or acquisition session when deployment needs unseen sources.
+
+A common pipeline decodes pixels, converts channel order, resizes or crops, scales values, and forms batches. Confirm expected shape, such as batch by channels by height by width. Normalization statistics come from training data. At inference, apply the same deterministic preprocessing. For augmentation, choose transformations that preserve the label in the domain.
+
+## 12. Convolution with an example
+
+A 3-by-3 filter slides over image patches. At each location it multiplies patch pixels by filter weights and sums them. During learning, gradient updates change those shared weights. A filter may respond to an edge or texture, but human interpretations should be verified rather than assumed.
+
+Stride controls how far the filter shifts; padding controls boundary handling. A larger stride reduces output resolution. Stacking convolutions lets the model combine local patterns into larger structures. Pooling summarizes nearby responses, though modern networks may also use strided convolutions. The architecture and preprocessing determine what information can be represented.
+
+## 13. Match metrics to the task
+
+For classification, inspect per-class precision, recall, and confusion matrix. For detection, a prediction needs a class and a box; evaluation often checks overlap at one or more thresholds. IoU is intersection area divided by union area. For segmentation, assess pixel-level class quality and mean IoU while checking rare classes separately. An average over categories treats a small class differently than an average over all pixels.
+
+Threshold choice matters. A high confidence threshold may reduce false detections while missing small or occluded objects. Report the full protocol, including class averaging and IoU thresholds. Inspect examples near the decision boundary and errors by lighting, device, geography, subject size, and occlusion.
+
+## 14. Transfer learning case study
+
+Suppose only 800 labeled photos are available. A random split can be optimistic if images from the same photographer or scene appear in both partitions. First create a group-aware split. Use a pretrained vision model as a frozen feature extractor, train a small classifier, and record validation performance. Then unfreeze later layers carefully and compare. If full fine-tuning hurts validation, the target data may be too small or learning rate too large. Check class-specific errors before choosing the final version.
+
+Questions: Why can accuracy hide failure on one class? Large classes dominate the count. Why group split? Related images share background and identity cues. Why save preprocessing with model? Different resize or normalization changes inputs.
+
+Further reading: [Torchvision models](https://pytorch.org/vision/stable/models.html) and [COCO evaluation](https://cocodataset.org/#detection-eval).

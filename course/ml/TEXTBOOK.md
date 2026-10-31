@@ -146,3 +146,25 @@ A robust evaluation states sample size, split rule, metric, uncertainty where po
 Questions: Why can training loss fall while test performance worsens? The learner may fit noise or exploit a mismatch. Why compare slices? An aggregate average can hide a subgroup failure. Why is a score not itself a decision? Someone must choose an action policy and threshold based on costs.
 
 Further reading: [scikit-learn model evaluation](https://scikit-learn.org/stable/modules/model_evaluation.html), [cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html), and [Google dataset splitting](https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets).
+
+## 16. Core model families and when to compare them
+
+Linear regression predicts a numeric value as a weighted sum of features. Logistic regression transforms a linear score into class probabilities and is a strong classification baseline. Decision trees split features into rule-like regions. A random forest averages many varied trees, often reducing variance. Gradient boosting adds learners sequentially to correct prior errors and can be powerful on tabular data. Support-vector methods seek margins between classes; nearest-neighbor methods use local similarity. No family wins every task.
+
+Model selection should consider data size, feature types, interpretability, latency, maintenance, and error costs. A complex model can overfit or be hard to explain. A useful comparison holds the split and metric fixed and uses validation data for selection.
+
+## 17. Loss functions and probability outputs
+
+Squared error heavily penalizes large numeric residuals. Absolute error is less sensitive to outliers. Binary cross-entropy penalizes probability assignments that disagree with binary labels. Multiclass cross-entropy compares a probability distribution across classes with the correct class. These losses create different optimization pressures.
+
+A probability output is calibrated if, among cases assigned 0.7 probability, about 70% experience the event over repeated cases under the evaluation setting. A model may rank cases well but be poorly calibrated. Calibration can matter when decisions use probabilities or combine risk with costs. It must be assessed on data that was not used to fit the calibration method.
+
+## 18. Validation, bias, and the data-generating process
+
+A random split assumes rows can be independently mixed for the intended use. If the goal is future prediction, split by time. If predicting for new people, split by person. If records are repeated measurements, group them. A split is a simulation of deployment and should reproduce what will actually be new.
+
+Labels may reflect human processes rather than objective truth. A historical hiring decision is a label about prior decisions, not necessarily about job ability. A model can reproduce historical discrimination with high accuracy. Data quality includes how outcomes were defined, who was included, and who had the opportunity to be observed.
+
+Questions: Why does regularization help? It constrains model complexity or weights under a chosen assumption. Why does cross-validation not solve bias? It reuses samples to estimate performance but cannot make labels fair or prevent a wrong deployment split. Why compare multiple metrics? A system's costs may be asymmetric.
+
+Practice: choose a dataset from a domain you care about. State what each row means, when each feature is known, what label represents, how to split, which baseline to use, and which errors harm people.

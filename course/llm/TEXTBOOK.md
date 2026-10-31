@@ -88,3 +88,31 @@ A context window limits input and generated tokens per call. Long context increa
 Language models generate likely continuations, not verified database records. They can answer confidently when evidence is absent. Retrieval may help but indexing, search, freshness, and citation use can all fail. Evaluate task success, factual support, refusal behavior, latency, and cost. Inspect adversarial and out-of-distribution examples.
 
 Further reading: [Attention Is All You Need](https://arxiv.org/abs/1706.03762), [Hugging Face LLM course](https://huggingface.co/learn/llm-course/en/chapter1/1), and [Stanford CS224N](https://web.stanford.edu/class/cs224n/).
+
+## 12. The transformer block as a sequence of operations
+
+A transformer block usually includes attention, a feed-forward network, residual connections, and normalization. Residual connections add a block's input to its output, helping information and gradients pass through depth. A feed-forward layer transforms each position independently after attention has mixed contextual information. Layer normalization stabilizes activations using statistics over feature dimensions.
+
+Positional information is needed because attention alone does not automatically know token order. Positional embeddings or other position schemes provide information about location or relative distance. Causal masking ensures a language model predicts from left context only. Encoder-style models may attend bidirectionally; decoder-style next-token models use causal attention.
+
+## 13. Pretraining objectives and adaptation
+
+Causal language modeling predicts the next token from earlier tokens. Masked language modeling hides selected tokens and predicts them from context. These objectives create different training signals and influence downstream use. A chat model may include later supervised instruction tuning and preference optimization; the user-facing behavior reflects these stages, not only raw pretraining.
+
+Fine-tuning uses task examples to adjust model parameters. Full fine-tuning can be expensive. LoRA and related parameter-efficient methods train small low-rank updates while keeping most base weights fixed. Prompt tuning changes learned prompt representations. Retrieval augmentation instead supplies external passages per query. These choices trade training cost, knowledge freshness, behavior change, and operational complexity.
+
+## 14. Inference engineering
+
+Autoregressive generation predicts one token at a time. A key-value cache stores past attention computations to avoid recomputing them, trading memory for speed. Batching improves hardware utilization but can increase latency for individual requests. Quantization uses lower-precision representations to reduce memory and potentially speed inference, with possible quality changes.
+
+Track input and output token counts, latency, throughput, timeout rate, and cost. A long system prompt consumes context on every request. Truncation policies can remove critical evidence, so inspect which parts are retained. Define a maximum generation length and stop conditions.
+
+## 15. Evaluation and model choice
+
+A benchmark can be contaminated by training data, and a single score can hide weak tasks. Evaluate the actual application with representative inputs, adversarial cases, refusal expectations, evidence requirements, and human review. Compare models under similar prompts and inference budgets. Measure quality, cost, latency, privacy, and licensing.
+
+Questions: Is retrieval equivalent to fine-tuning? No; retrieval changes supplied context, while fine-tuning changes model parameters. Does a bigger context always improve answers? No; it costs more and irrelevant text can distract. Does low temperature make output factually reliable? No.
+
+Practice: specify how you would evaluate an assistant for internal policy questions. Include answerable and unanswerable cases, source citations, permissions, prompt injection, latency, and human escalation.
+
+Further reading: [Hugging Face LLM course](https://huggingface.co/learn/llm-course/en/chapter1/1) and [Attention Is All You Need](https://arxiv.org/abs/1706.03762).

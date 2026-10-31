@@ -77,3 +77,27 @@ Text can reveal names, addresses, health details, and confidential work. Removin
 Questions: Why can static embeddings miss sentence meaning? A token's vector alone does not express how context changes its meaning. Why keep classical NLP baselines? They are fast, useful, and show whether complexity is earning a gain.
 
 Further reading: [NLTK book](https://www.nltk.org/book/) and [Hugging Face Tokenizers](https://huggingface.co/docs/tokenizers/).
+
+## 12. A text-processing pipeline
+
+A text system may normalize Unicode, segment sentences, tokenize, map tokens to IDs, pad or truncate sequences, and build features. Each operation changes information. Lowercasing can merge proper names; removing punctuation can erase sentiment or code structure; stemming may conflate distinct forms. Preprocessing should be justified by the language and task, then kept consistent at training and inference.
+
+A vocabulary maps tokens to integer identifiers. Unknown-token handling matters for unseen words. Subword tokenizers break uncommon strings into known pieces and can represent many languages with a fixed vocabulary, but tokenization quality varies. Inspect accented text, scripts, emoji, URLs, and domain-specific terms.
+
+## 13. Classical baselines and embeddings
+
+Bag-of-words represents term counts without order. TF-IDF downweights terms common across documents. N-grams represent short sequences and can capture phrases such as “not safe.” These models are efficient and often competitive for small supervised datasets.
+
+An embedding is a learned vector. Similarity, often measured by cosine similarity, can identify related terms, but vector proximity is not proof of equivalence or fairness. Static embeddings assign one vector per token; contextual models compute representations influenced by surrounding words. The word “bank” in a river sentence and a finance sentence may need different contextual representations.
+
+## 14. Language tasks need distinct evaluation
+
+Classification uses labels; named-entity recognition tags spans; information extraction builds structured fields; translation maps between languages; summarization compresses content; retrieval ranks documents. A metric designed for one task may not reflect another. For generation, human assessment often needs a rubric for factuality, completeness, and clarity. For retrieval, judge relevance at useful ranks.
+
+Annotation instructions should define ambiguous cases. Check inter-annotator agreement, but remember disagreement can reflect a genuinely ambiguous task. Evaluate across language, dialect, domain, text length, and code-switching. Near-duplicate documents can inflate scores if split across partitions.
+
+Privacy and rights are central because text often contains personal or copyrighted content. Determine collection provenance, allowed use, retention, and access before training. De-identification does not ensure anonymity.
+
+Practice: build a TF-IDF baseline for sentiment, inspect false positives and false negatives, then add bigrams. Explain which examples changed and why. Compare results on a separate test set and include class counts.
+
+Further reading: [NLTK Book](https://www.nltk.org/book/) and [Hugging Face Datasets](https://huggingface.co/docs/datasets/).

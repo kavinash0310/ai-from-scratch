@@ -160,3 +160,31 @@ Questions: Why use a virtual environment? It limits dependency conflicts between
 Practice: write a function that summarizes a list of records. State what it does with missing and malformed values. Test empty input, a valid record, duplicates, a missing value, and invalid type. Explain why each result is correct.
 
 Further reading: [Python tutorial](https://docs.python.org/3/tutorial/) and [Python Packaging User Guide](https://packaging.python.org/en/latest/).
+
+## 16. A small data-analysis workflow
+
+A trustworthy script separates reading, validation, transformation, computation, and reporting. First check that the file exists and has expected columns. Next validate types and ranges. Then handle missing values according to a documented rule. Keep the transformation code reusable and fit any learned transformation only on training data.
+
+For a CSV of measurements, a defensible workflow might: read the file; print row count and column types; count missing values; reject impossible negative measurements; split by time or subject as appropriate; fit a median imputer and scaler on training rows; apply them to the other partitions; save the split identifiers and configuration. Each step should be inspectable. A notebook is useful for exploration, but long-running work should eventually be placed in functions or scripts with clear inputs and outputs.
+
+## 17. Notebooks, environments, and reproducibility
+
+A notebook combines executable cells and narrative. Its hidden state can mislead: running cell 8 before cell 3 may use stale variables. Restart the kernel and run all cells from top to bottom before sharing. Clear secrets and avoid logging personal data. Store a short README with environment setup, data acquisition, and the exact command to reproduce an output.
+
+A dependency file records package names and versions. A virtual environment isolates project dependencies. Git tracks source and configuration changes. Large datasets or checkpoints may need external artifact storage and explicit version identifiers. Save a small manifest connecting the model output to source revision, data version, configuration, environment, and random seed.
+
+## 18. Testing a preprocessing function
+
+Suppose a function converts a list of raw ages into normalized numeric values. Test a known list and verify the expected result; test a missing age and verify the declared policy; test a negative age and verify rejection or reporting; test a constant list and guard against division by zero; test empty input. These cases reveal assumptions that a happy-path example hides.
+
+Property-based checks can assert general rules: output length equals the number of accepted records, all normalized values are finite, and accepted values remain within the documented range. A type hint helps communicate expected inputs but does not validate them at runtime. Clear error messages matter because datasets often contain unexpected values.
+
+## 19. Debugging a training script as software
+
+When a loss is NaN, inspect input values, target encoding, learning rate, and intermediate activations. When predictions have the wrong shape, print tensor dimensions at each boundary. When evaluation is suspiciously perfect, check duplicates, target leakage, train-test overlap, and preprocessing order. When a run changes unexpectedly, check environment and configuration before rewriting the algorithm.
+
+Questions: Why avoid changing five things at once? You will not know which change affected the result. Why version configuration? A code commit alone does not identify learning rate, batch size, split, or model choice. Why keep a script deterministic where feasible? It makes debugging and comparison easier, while recognizing hardware can still change exact results.
+
+Practice: create a command-line program that reads a small CSV, validates required columns, calculates one summary, and returns a useful error if data is invalid. Add tests for valid, empty, and malformed files.
+
+Further reading: [pytest getting started](https://docs.pytest.org/en/stable/getting-started.html) and [Jupyter notebook format](https://nbformat.readthedocs.io/en/latest/).

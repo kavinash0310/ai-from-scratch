@@ -63,3 +63,44 @@ Must research invent an algorithm? No; replication and careful measurement can b
 Practice: write a research question, hypothesis, baseline, split, metric, alternative explanation, and a result that would count against your preferred method.
 
 Further reading: [Stanford CS229](https://cs229.stanford.edu/), [ACM artifact review](https://www.acm.org/publications/policies/artifact-review-and-badging-current), and [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework).
+
+## 9. Statistical interpretation without overclaiming
+
+An observed improvement can arise from a real effect, random variation, data leakage, measurement error, or a changed evaluation protocol. Report sample size and uncertainty. If multiple models or prompts were tried and only the winner is reported, the apparent improvement may be optimistic. Predefine comparisons when feasible and disclose deviations.
+
+A p-value is not the probability that a hypothesis is true. It is calculated under a null model and assumptions. Statistical significance does not imply a practically important improvement. A one-point gain may not justify much higher latency or cost. For operational decisions, report effect size, uncertainty, and practical trade-offs.
+
+## 10. Dataset and split audit
+
+For each data source, record how examples were collected, who is represented, what labels mean, how missingness occurs, and any known exclusions. Check duplicates and near-duplicates before splitting. If the same person contributes several records, a random row split may leak identity. If predicting future events, preserve time order. If data comes from multiple sites, consider a held-out site to assess transfer.
+
+Keep a test set untouched by iterative choice. If the sample is too small for a stable holdout, use cross-validation or a carefully designed resampling plan and state limitations. A split should match the generalization claim: new examples, new people, future time, or new sites are different targets.
+
+## 11. Reproduction versus replication
+
+Reproduction attempts to obtain the same result using the original data and method. Replication tests whether a claim holds in a new setting or with an independent implementation. Both require precise details. Missing preprocessing or undocumented filtering may explain why a paper's headline number cannot be reproduced.
+
+Record exact library versions, checkpoint identifier, preprocessing, compute, seeds, prompts, and metric implementation. Preserve raw outputs and environment manifests. If the result differs, investigate systematically rather than adjusting until the number matches.
+
+## 12. Capstone quality rubric
+
+A strong capstone:
+- defines a real task and affected users;
+- documents provenance and rights for data;
+- includes a simple baseline;
+- uses a split that prevents leakage;
+- selects metrics tied to decision costs;
+- analyzes representative mistakes and relevant slices;
+- explains security, privacy, and misuse risks;
+- provides reproducible setup and a usable demo;
+- states limits and gives a justified release recommendation.
+
+A weak capstone often has a flashy interface but no held-out evaluation, unclear labels, or no baseline. The purpose of the rubric is to reward evidence and reasoning, not complexity.
+
+## 13. Oral defense questions
+
+What does one test example represent? Why was the split chosen? What result would falsify the claim? Which failure is most costly? How would the system behave if evidence is missing? What part of the pipeline is hardest to reproduce? What would change your deployment decision? A learner should answer from project evidence, not from general slogans.
+
+Practice: write a one-page proposal, then ask a peer to find leakage and alternative explanations. Revise the protocol before running expensive experiments. At the end, publish a short report with one successful result, one failed result, and one important uncertainty.
+
+Further reading: [Stanford CS229](https://cs229.stanford.edu/), [ACM artifact review guidance](https://www.acm.org/publications/policies/artifact-review-and-badging-current), and [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework).

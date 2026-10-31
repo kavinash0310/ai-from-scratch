@@ -127,3 +127,33 @@ Questions: What direction does a gradient point? Toward the steepest local incre
 Practice the base-rate example with a prevalence of 0.1%, sensitivity of 95%, and false-positive rate of 1%. Compute the approximate number of true and false alerts among 100,000 cases, then explain why precision differs from sensitivity.
 
 Further reading: [Seeing Theory](https://seeing-theory.brown.edu/) and [3Blue1Brown linear algebra](https://www.3blue1brown.com/topics/linear-algebra).
+
+## 15. Matrices as batches of examples
+
+Let X contain m examples and n features, so X has shape (m,n). Let w contain n weights, and let b be one scalar. The expression Xw+b produces m predictions. A row of X is one example; a column is one feature. If a library expects data shaped (channels,height,width), feeding (height,width,channels) may be wrong even if the same numbers are present.
+
+For a linear prediction yhat = Xw+b and squared-error loss L = (1/m) sum((yhat-y)^2), the gradient with respect to w is proportional to X transpose times the residual. This says each feature's update depends on how that feature co-varies with the prediction error. Matrix notation is compact because it applies the same calculation to every row.
+
+## 16. Distributions and expectation
+
+A probability distribution assigns probability mass or density to possible outcomes. A Bernoulli variable represents a yes/no outcome with parameter p. A categorical variable selects one of several classes. A normal distribution is often used as an approximation for continuous noise, but it is not automatically appropriate for every dataset.
+
+The expectation is a probability-weighted average. For outcomes 0 and 10, with probabilities 0.9 and 0.1, expected value is 1. It does not say the outcome will be 1; it summarizes repeated uncertainty. Variance measures spread around the mean. In decision-making, expected loss weighs possible errors by their probability and cost.
+
+A dataset is a sample from a collection process. If collection excludes some groups or records outcomes differently, statistical calculation cannot make that sample representative by itself. Document sampling and missingness before interpreting estimates.
+
+## 17. Derivatives and optimization step by step
+
+For f(w)=(w-3)^2, derivative is 2(w-3). If w=0, derivative is -6, so moving opposite the gradient increases w and approaches the minimum at 3. A gradient-descent update is w_new=w_old-learning_rate*gradient. With learning rate 0.1, the update is 0 - 0.1*(-6)=0.6. Too large a rate can jump back and forth or diverge; too small a rate makes progress slow.
+
+In many dimensions, the gradient is a vector of partial derivatives. The learning rate controls step size. Momentum smooths updates using a running direction; adaptive optimizers scale coordinates using gradient history. These optimizers do not fix a bad loss, mislabeled data, or invalid evaluation.
+
+## 18. Metrics as mathematical definitions
+
+For binary classification, precision=TP/(TP+FP), recall=TP/(TP+FN), and specificity=TN/(TN+FP). Accuracy=(TP+TN)/all examples. Each answers a different question. If the denominator is zero, the metric is undefined and software may return a convention; inspect counts rather than accepting the number blindly.
+
+A threshold changes TP, FP, TN, and FN. The ROC curve compares true-positive rate against false-positive rate across thresholds; the precision-recall curve emphasizes the positive class and can be more revealing when events are rare. AUC summarizes ranking behavior across thresholds but does not select an operating point.
+
+Practice: derive the precision, recall, and accuracy for TP=40, FP=10, TN=900, FN=50. Then explain which metric matters if false negatives are most costly and why a decision threshold still needs review.
+
+Further reading: [Khan Academy linear algebra](https://www.khanacademy.org/math/linear-algebra) and [Seeing Theory](https://seeing-theory.brown.edu/).

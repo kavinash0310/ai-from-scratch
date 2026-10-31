@@ -63,3 +63,31 @@ Why is reward only a proxy? Because it measures a chosen signal and can omit sid
 Practice: choose one specialization and write the task, affected people, available-at-decision inputs, baseline, primary metric, error cost, and fallback. For RL include state, action, reward, and exploration limits. For forecasting include horizon and chronological split. For graphs include edge semantics and leakage controls.
 
 Further reading: [Sutton and Barto](http://incompleteideas.net/book/the-book-2nd.html), [Google recommendation systems](https://developers.google.com/machine-learning/recommendation), [Forecasting: Principles and Practice](https://otexts.com/fpp3/), [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/), and [ROS 2](https://docs.ros.org/).
+
+## 8. Reinforcement learning: value update in a tiny example
+
+Suppose an agent takes an action, receives reward r, and moves to state s'. Q-learning updates Q(s,a) toward r + gamma times the largest estimated next-action value. If current estimate is 2, observed reward is 1, gamma is 0.9, and the next state's largest estimate is 4, the target is 4.6. With learning rate 0.5, the estimate moves halfway from 2 to 4.6, reaching 3.3. The learning rate controls how quickly experience changes the estimate.
+
+This update assumes the transition and reward are meaningful. If the reward grants points for speed but ignores collisions, a robot may learn unsafe behavior. Reward clipping, exploration schedules, and simulator fidelity affect outcomes. Evaluate with multiple random seeds and report variation, not only the most successful run.
+
+## 9. Recommendation: exposure and experimentation
+
+Ranking changes what users see, which changes future clicks and training data. This is a feedback loop. A system can over-recommend popular items and reduce discovery. Position bias means a top-ranked item receives more clicks partly because it is visible. Offline logs are therefore biased by the prior ranking policy.
+
+Candidate generation and ranking have different recall and latency requirements. A candidate stage should avoid dropping relevant items; ranking can then order the candidate set. Use a time-based or user-based split that matches deployment. Online experiments can estimate the effect of a change but need guardrails for user harm, novelty, and long-term outcomes. Do not optimize engagement without defining what benefit it represents.
+
+## 10. Forecasting: horizon, seasonality, and uncertainty
+
+A forecast horizon is how far ahead predictions are needed. Forecast accuracy often declines with horizon. A seasonal baseline repeats an observation from the previous season, such as last week's same weekday. This baseline can be surprisingly hard to beat.
+
+Rolling-origin evaluation simulates repeated real forecasting moments. At each origin, train only on past observations, forecast the next horizon, and record errors. Use prediction intervals and inspect whether they cover outcomes at the expected rate. Avoid leakage from centered rolling windows or revised future information. If demand has holidays or promotions, future features are usable only if known at forecast time.
+
+## 11. Graph and robotics project boundaries
+
+For graph prediction, decide if the target is a missing edge, node label, or future event. Build train/validation/test graphs so the target cannot leak through message passing. Compare a graph model with simple degree or neighborhood baselines. Check whether graph edges encode sensitive or inferred relationships.
+
+For robotics, divide the problem into perception, state estimation, planning, control, and safety. Test each layer with fault injection: missing sensor, delayed packet, obstacle, motor saturation. A simulated policy should transfer to hardware only after staged validation. Safety constraints must remain active if the learned component fails.
+
+Questions: Why not reward clicks alone? Visibility affects clicks and can harm user value. What is a forecast origin? The time at which the prediction is made using then-available information. What does message passing do? It aggregates information along graph edges.
+
+Practice: select one area and design a baseline experiment, split policy, metric, failure analysis, and safe fallback. State the biggest assumption you are making and how you would test it.
